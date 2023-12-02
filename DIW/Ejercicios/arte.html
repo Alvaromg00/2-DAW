@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Arte</title>
+    <style>
+        h1{
+            padding-left: 270px;
+        }
+        #bloque {
+            padding-left: 60px;
+            
+        }
+        #boton{
+            margin-left: 400px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <h1>CATÁLOGO DE ARTE</h1>
+        <br>
+        <h4>Introduce los términos de búsqueda:</h4>
+        <table>
+            <tr>
+                <td id="bloque">
+                    <h3>OBRA</h3>
+                    <label>Título</label>
+                    <input type="text"><br><br>
+                    <label>Autor</label>
+                    <input type="text" size="12">
+                </td>
+            
+                <td id="bloque">
+                    <h3>TIPO</h3>
+                    <input type="checkbox" name="tipo" value="esc">Escultura<br>
+                    <input type="checkbox" name="tipo" value="arq">Arquitectura<br>
+                    <input type="checkbox" name="tipo" value="pint">Pintura
+                </td>
+
+                <td id="bloque">
+                    <h3>DISPONIBILIDAD</h3>
+                <input type="radio" name="disp" value="publ">Museo/Acceso público<br>
+                <input type="radio" name="disp" value="priv">Colección privada
+                </td>
+                <td id="bloque">
+                    <h3>ESTILO</h3>
+                    <select name="estilo">
+                        <option value="clas">Clásico</option>
+                        <option value="abs">Abstracto</option>
+                        <option value="surr">Surrealista</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </td>
+            </tr>
+        </table><br><br>
+        
+        <table>
+            <tr>
+                <td>
+                    <h4>Háganos saber sus sugerencias: </h4>
+                    
+                </td>
+                <td>
+                    <textarea rows="4" cols="40">Me gustaría indicar que...</textarea>
+                    
+                </td>
+                
+            </tr>
+            
+        </table>
+        <input type="submit" value="Buscar" id="boton">
+    </form>
+</body>
+</html>

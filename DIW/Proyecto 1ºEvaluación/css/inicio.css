@@ -1,0 +1,174 @@
+body{
+    flex-direction: column;
+    background-color: #8B765C;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+}
+
+#logo{
+    display: flex;
+    width: 25vw;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+#pedir{
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 20vw;
+    height: 5vw;
+    margin-left: 5vw;
+    margin-top: 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 8vw;
+    height: auto;
+}
+
+#letLogo{
+    color: white;
+    font-size: 5vw;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 4vw;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#fotoCasco{
+    background-image: url(../fotos/cascos.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#titulo{
+    margin-right: auto;
+    margin-left: 5vw;
+    font-size: 5vw;
+}
+
+p{
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.precios{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 20vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4vw;
+}
+
+.precios p {
+    margin: 0;
+}
+
+.cascos{
+    width: 80%;
+    margin-top: 7vh;
+    border-radius: 10px;
+}
+
+#index{
+    color: lightgray;
+}
+
+footer{
+    display: flex;
+    margin-top: 3vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rsociales{
+    width: 8vw;
+    height: 5vh;
+    margin-left: 4vw;
+}
+
+.producto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contacto{
+    font-size: 5vw;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+@media screen and (min-width:800px) {
+
+    .cascos{
+        max-width: 700px;
+    }
+    
+    p{
+        font-size: clamp(2rem, 2vw + 1rem, 6rem);
+    }
+
+}
+
+@media screen and (min-width:1300px) {
+    header{
+        display: flex;
+        justify-content: flex-end;
+        margin: 5vh;
+        width: 90%;
+        align-items: center;
+    }
+
+    #nav{
+        width: 70%;
+    }
+
+    .cascos{
+        margin-right: auto;
+        margin-left: 5%;
+    }
+
+    .producto{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+}

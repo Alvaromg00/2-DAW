@@ -1,0 +1,250 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8B765C;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vh;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    color: white;
+    font-size: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#datos{
+    display: flex;
+    flex-direction: column;
+}
+
+hr{
+    width: 90%;
+}
+
+#tramitar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a77b3f;
+    width: 25vw;
+    height: 6vw;
+    border-radius: 8px;
+    margin-top: 2vw;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cambiar{
+    text-decoration: underline;
+}
+
+.negro{
+    color: rgb(8, 8, 12);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#opcionesEnvio{
+    margin-top: 4vw;
+}
+
+
+.check{
+    display: flex;
+}
+
+.envio{
+    color: black;
+    margin-left: 1vw;
+}
+
+#resumen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    border: 5px solid rgb(155, 115, 42);
+    width: 80vw;
+    height: auto;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: rgb(75, 75, 75);
+}
+
+h1{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vw;
+}
+
+#resumen p{
+    color: rgb(155, 115, 42);
+    font-size: 4vw;
+}
+
+#fotoPedido{
+    width: 15vw;
+    border-radius: 40px;
+    margin-top: 3vw;
+    margin-left: 3vw;
+}
+
+#producto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#producto p{
+    color: white;
+    font-size: 4vw;
+    margin: 3vw;
+}
+
+#resumen #lista{
+    color: white;
+    margin-left: 4vw;
+}
+
+#resumen .p1{
+    display: flex;
+}
+
+#resumen .p1 p{
+    color: white;
+    font-size: 2.5vw;
+    margin-left: 8vw;
+}
+
+#resumen .p1 #precio{
+    margin-right: 8vw;
+}
+
+#resumen #precioTotal{
+    margin-top: 0vw;
+}
+
+#resumen #botonPagar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #443728;
+    width: 30vw;
+    height: 10vw;
+    font-size: 4vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vw;
+}
+
+footer{
+    display: flex;
+    margin-top: 3vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rsociales{
+    width: 8vw;
+    height: 5vh;
+    margin-left: 4vw;
+}
+
+#contacto{
+    font-size: 5vw;
+}
+
+#datos > div {
+    display: grid;
+    place-items: center;
+}
+
+#datos > div > .datos{
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 30vw;
+}
+
+@media screen and (min-width: 800px) {
+    #datos > div {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+    }
+
+    #datos > div > .datos{
+        margin-top: 1vw;
+        display: flex;
+        justify-content: space-around;
+        gap: 4vw;
+    }
+
+    #datos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #direccion{
+        margin-left: 5vw;
+    }
+
+    #opcionesEnvio{
+        margin-left: 5vw;
+    }
+
+    #envioGratis{
+        margin-left: 18vw;
+    }
+}
+
+
+@media screen and (min-width: 1300px) {
+    #datos{
+        flex-direction: column;
+        justify-content: space-around;
+        max-height: 130vh;
+    }
+    #direccion{
+        margin-left: 0vw;
+    }
+    #envios{
+        width: 40vw;
+    }
+    #envioGratis{
+        margin-left: 0vw;
+    }
+
+    main{
+        display: flex;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    #opcionesEnvio{
+        margin-left: 0vw;
+    }
+
+}

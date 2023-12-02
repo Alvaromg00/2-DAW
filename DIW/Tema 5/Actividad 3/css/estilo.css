@@ -1,0 +1,98 @@
+header{
+    background-color: yellow;
+    height: 9rem;
+    margin-bottom: 0.5rem;
+}
+
+nav{
+    background-color: blue;
+    height: 28rem;
+    margin-bottom: 0.5rem;
+}
+
+main{
+    background-color: green;
+    height: 9rem;
+    margin-bottom: 0.5rem;
+}
+
+
+footer{
+    background-color: orange;
+    height: 9rem;
+}
+
+@media screen and (min-width:480px) and (max-width:800px) {
+    body{
+        position: relative;
+    }
+
+    header {
+        background-color: yellow;
+        height: 9rem;
+        clear: both;
+    }
+    
+    main {
+        background-color: blue;
+        height: 28rem;
+    }
+    
+    aside {
+        background-color: green;
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+    
+    nav {
+        background-color: red;
+        height: 9rem;
+        clear: both;
+    }
+    
+    footer {
+        background-color: orange;
+        height: 9rem;
+        clear: both;
+    }
+}
+
+@media screen and (min-width:800px) {
+
+    body{
+        position: relative;
+    }
+
+    header {
+        background-color: yellow;
+        height: 15rem;
+        clear: both;
+        margin-bottom: 0.5rem;
+    }
+    
+    main, aside, nav {
+        width: 33%;
+        float: left;
+        height: 33rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    main {
+        background-color: blue;
+    }
+    
+    aside {
+        background-color: green;
+    }
+    
+    nav {
+        background-color: red;
+    }
+    
+    footer {
+        background-color: orange;
+        clear: both;
+    }
+
+}

@@ -1,0 +1,54 @@
+nav{
+    background-color: rgb(137, 221, 104);
+    height: 9rem;
+border: 5px solid black;
+}
+
+header{
+    background-color: rgb(245, 194, 55);
+    height: 12rem;
+    border: 5px solid black;
+    border-top: 0px solid black;
+}
+
+main{
+    background-color: lightblue;
+    height: 10rem;
+    border: 5px solid black;
+    border-top: 0px solid black;
+}
+
+section{
+    background-color: purple;
+    height: 11rem;
+    border: 5px solid black;
+    border-top: 0px solid black;
+}
+
+footer{
+    background-color: green;
+    height: 10rem;
+    border: 5px solid black;
+    border-top: 0px solid black;
+}
+
+@media screen and (min-width:600px) {
+    nav{
+        float: left;
+        height: 27rem;
+        width: 25%;
+    }
+
+    header{
+        border-top: 5px solid black;
+        height: 13rem;
+    }
+
+    main{
+        height: 14rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    
+}

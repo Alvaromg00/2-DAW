@@ -1,0 +1,147 @@
+#biografia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: rgb(86, 146, 146);
+}
+
+hr {
+    width: 85vw;
+    border-color: black;
+  }
+
+#nombre{
+    font-size: xx-large;
+}
+
+img{
+    width: 180px;
+}
+
+.cat{
+    font-size: x-large;
+}
+
+#aficiones{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: rgb(128, 194, 115);
+}
+
+#musica{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: rgb(180, 68, 68);
+}
+
+#cine{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: rgb(67, 78, 235);
+}
+
+ul{
+    margin-top: -3vw;
+}
+
+#peli{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width:480px) and (max-width:900px){
+    
+    #ejemplos{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    #tipos{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    #categorias{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    ul{
+        margin-top: 0vw;
+    }
+
+    li{
+        margin-left: 5vw;
+    }
+
+}
+
+@media screen and (min-width:900px){
+
+
+    #aficiones{
+        border-radius: 0px;
+        background-image: linear-gradient(to right, rgb(72, 204, 101), #2c9e2c);
+    }
+    
+    #musica{
+        background-image: linear-gradient(to right, rgb(219, 93, 89), #9e2a2a);
+        border-radius: 0px;
+    }
+    
+    #cine{
+        background-image: linear-gradient(to right, rgb(89, 113, 219), #21349c);
+        border-radius: 0px;
+    }
+
+    #ejemplos{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    #tipos{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    #categorias{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    ul{
+        margin-top: 0vw;
+    }
+
+    li{
+        margin-left: 5vw;
+    }
+
+    hr{
+        width: 100%;
+    }
+}
+
+
+

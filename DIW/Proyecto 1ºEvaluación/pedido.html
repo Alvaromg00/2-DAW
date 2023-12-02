@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="icon" type="image/svg" href="fotos/wave-square-solid.svg"/>
+    <link rel="stylesheet" href="css/pedido.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html"><p>Inicio</p></a>
+        <a href="productos.html"><p id="product">Productos</p></a>
+        <a href="iniciarSesion.html"><p>Iniciar Sesión</p></a>
+    </header>
+    <hr>
+    <div id="tramitar"><p>Tramitar pedido</p></div>
+    <main>
+        <div id="datos">
+            <div id="direccion">
+                <div class="datos"><p>1.Dirección de envío:</p><p class="cambiar">cambiar</p></div>
+                <p class="negro">Álvaro Morón</p>
+                <p class="negro">AV/Lope de Vega  192</p>
+                <p class="negro">Getafe-Madrid  28906 España</p>
+            </div>
+            <div>
+                <div class="datos"><p>2. Método de pago:</p><p class="cambiar">cambiar</p></div>
+                <p class="negro">Tarjeta de crédito VISA ***4</p>
+            </div>
+            <div id="envios">
+                <p id="opcionesEnvio">3. Opciones de envío:</p>
+                <div class="check" id="envioGratis"><input type="radio" name="envio"><p class="envio"><strong>GRATIS</strong> Envío Estándar | Recíbelo el 11 de Diciembre </p></div>
+                <div class="check"><input type="radio" name="envio"><p class="envio">4.99€ Envío Premium | Recíbelo mañana </p></div>
+            </div>
+        </div>
+        <div id="resumen">
+            <h1>Resumen del pedido</h1>
+            <p>(1 producto)</p>
+            <div id="producto">
+                <img src="fotos/casco2.jpg" id="fotoPedido">
+                <p>Forgeon Sergeant Auriculares Gaming 7.1</p>
+            </div>
+            <p id="dorado">(Fecha de entrega: 9 Dic 2023)</p>
+            <hr>
+            <p id="lista">Productos:</p>
+            <div class="p1">
+                <p>Forgeon Sergeant Auriculares Gaming 7.1</p>
+                <p>94.98€</p>
+            </div>
+            <div class="p1">
+                <p>Envío</p>
+                <p id="precio">4.99€</p>
+            </div>
+            <p>Importe total:</p>
+            <p id="precioTotal">99.97€</p>
+            <div id="botonPagar">Pagar</div>
+        </div>
+    </main>
+    <footer>
+        <p id="contacto">Contáctanos:</p>
+        <a href="https://www.facebook.com/"><img src="fotos/facebook-f.svg" class="rsociales"></a>
+        <a href="https://www.instagram.com/"><img src="fotos/instagram.svg" class="rsociales"></a>
+        <a href="https://twitter.com/"><img src="fotos/x-twitter.svg" class="rsociales"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+header{
+    background-image: url(../Patrones/bg_verde.png);
+    height: 200px;
+}
+
+footer{
+    background-image: url(../Patrones/bg_gris.png);
+    height: 200px;
+    margin-top: 15px;
+    padding-bottom: 40px;
+}
+
+body{
+    margin: auto;
+    background-color: rgb(218, 218, 218);
+}
+
+img{
+    max-width: 100%;
+}
+
+#logo{
+    max-width: 90%;
+}
+a{
+    text-decoration: none;
+    color: rgb(161, 160, 160);
+    margin-left: 40px;
+    font-size: small;
+}
+
+#login{
+    color: aliceblue;
+}
+
+nav{
+    margin-top: 3rem;
+    border-top: 1px dotted gray;
+    border-bottom: 1px dotted gray;
+}
+
+main{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(242, 243, 243);
+    border-radius: 4px;
+    padding-bottom: 50px;
+}
+
+#breadcrumbs, #nota{
+    font-size: smaller;
+    text-align: left;
+}
+
+#breadcrumbs{
+    padding-top: 0.5rem;
+}
+
+#formulario{
+    margin-left: 15px;
+    margin-right: 15px;
+    color: rgb(85, 85, 85);
+    text-align: center;
+}
+
+.labels{
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    margin-right: 1rem;
+}
+
+.asterisco{
+    color: red;
+}
+
+button{
+    background-color: rgb(180, 180, 180);
+    font-size: 15px;
+    width: 70px;
+    height: 28px;
+    border: 0cap;
+    border-radius: 5px;
+    color: rgb(71, 71, 71);
+}
+
+.apunte{
+    font-size: 11px;
+    font-family: sans-serif;
+}
+
+table{
+    text-align: center;
+}
+
+#borde{
+    border-bottom: 1px dotted rgb(117, 117, 117);
+}
+
+#frase{
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+}
+@media screen and (min-width: 600px) {
+    
+    nav{
+        text-align: center;
+    }
+    
+    #formulario{
+        text-align: left;
+    }
+
+    footer{
+        text-align: center;
+    }
+    
+    table{
+        margin: 0 auto;
+    }
+    
+}
