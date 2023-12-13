@@ -1,59 +1,43 @@
 header{
     background-color: yellow;
-    height: 11rem;
-    margin-bottom: 0.5rem;
+    height: 18vh;
+
 }
 
 nav{
     background-color: green;
-    height: 9rem;
-    margin-bottom: 0.5rem;
+    height: 15vh;
+
 }
 
 main{
     background-color: blue;
-    height: 26rem;
-    margin-bottom: 0.5rem;
+    height: 45vh;
+
 }
 
 
 footer{
     background-color: orange;
-    height: 10rem;
+    height: 20vh;
 }
 
 @media screen and (min-width:480px) {
-    body{
-        position: relative;
+    nav, main{
+        height: 60vh;
+        float: left;
     }
 
-    header {
-        background-color: yellow;
-        height: 11rem;
-        margin-bottom: 0.5rem;
-    }
-    
     main {
-        background-color: blue;
-        right: 0;
-        width: 74%;
+        width: 75%;
     }
     
     nav {
-        background-color: green;
-        left: 0;
         width: 25%;
-    }
-
-    nav, main {
-        position: absolute;
-        height: 35rem;
     }
     
     footer {
-        background-color: orange;
-        margin-top: 36rem;
-        height: 10rem;
+        clear: both;
     }
 
 }

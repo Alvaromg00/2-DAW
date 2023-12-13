@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <h1>FORMULARIO DE ALTA</h1>
+
+    <form action="responderFormulario.php" method="get">
+        <label for="nombreApellidos">Nombre y Apellidos:</label>
+        <input type="text" required id="nombreApellidos" name="nombreApellidosform" pattern="[a-zA-Z]{3,}">
+
+        <br>
+        <br>
+
+        <label for="contra">Contraseña de acceso:</label>
+        <input type="password" id="contra" name="contraseña"  value="password" required>
+
+        <br>
+        <br>
+
+            <label>Sexo:</label>
+            <label for="Hombre"> <input type="radio" name="sexo" id="Hombre"> Hombre:</label>
+            <label for="Mujer"><input type="radio" name="sexo" id="Mujer"> Mujer:</label>
+
+        <br>
+        <br>
+        
+        <label for="areatext">Dirección postal</label>
+        <textarea name="areatext" id="areatext" cols="20" rows="6"></textarea>
+
+        <br>
+        <br>
+
+        <label for="ubi">Localidad</label>
+        <select name="localidad" id="ubi">
+            <option value="Cáceres">Cáceres</option>
+            <option value="Badajoz">Badajoz</option>
+            <option value="Mérida">Mérida</option>
+        </select>
+
+        <br>
+        <br>
+        <div class="boletinysubmit">
+        <label for="boletin"><input type="checkbox" name="recibBoletin" id="boletin"> Deseo recibir boletines</label>
+
+        <br>
+
+        <input type="submit" value="Realizar el registro" id="submit">
+        </div>
+    </form>
+    
+</body>
+</html>

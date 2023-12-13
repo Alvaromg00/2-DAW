@@ -10,6 +10,7 @@ footer{
     padding-bottom: 40px;
 }
 
+
 body{
     margin: auto;
     background-color: rgb(218, 218, 218);
@@ -31,10 +32,12 @@ a{
 
 #login{
     color: aliceblue;
+
 }
 
 nav{
-    margin-top: 3rem;
+
+    margin-top: 1.5rem;
     border-top: 1px dotted gray;
     border-bottom: 1px dotted gray;
 }
@@ -91,6 +94,7 @@ button{
     font-family: sans-serif;
 }
 
+
 table{
     text-align: center;
 }
@@ -105,21 +109,7 @@ table{
     font-weight: lighter;
 }
 @media screen and (min-width: 600px) {
-    
-    nav{
-        text-align: center;
-    }
-    
     #formulario{
         text-align: left;
     }
-
-    footer{
-        text-align: center;
-    }
-    
-    table{
-        margin: 0 auto;
-    }
-    
 }

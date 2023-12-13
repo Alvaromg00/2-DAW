@@ -1,54 +1,42 @@
+* {
+    margin: 0;
+}
+
 nav{
-    background-color: rgb(137, 221, 104);
-    height: 9rem;
-border: 5px solid black;
+    background-color: lightgreen;
+    height: 20vh;
 }
-
 header{
-    background-color: rgb(245, 194, 55);
-    height: 12rem;
-    border: 5px solid black;
-    border-top: 0px solid black;
+    background-color: orange;
+    height: 25vh;
 }
-
 main{
     background-color: lightblue;
-    height: 10rem;
-    border: 5px solid black;
-    border-top: 0px solid black;
+    height: 17vh;
 }
-
 section{
     background-color: purple;
-    height: 11rem;
-    border: 5px solid black;
-    border-top: 0px solid black;
+    height: 15vh;
 }
-
 footer{
     background-color: green;
-    height: 10rem;
-    border: 5px solid black;
-    border-top: 0px solid black;
+    height: 15vh;
 }
 
 @media screen and (min-width:600px) {
     nav{
         float: left;
-        height: 27rem;
-        width: 25%;
-    }
-
-    header{
-        border-top: 5px solid black;
-        height: 13rem;
-    }
-
-    main{
-        height: 14rem;
+        height: 42vh;
+        width: 20vw;
     }
 }
 
-@media screen and (min-width:1000px) {
-    
+@media screen and (min-width:900px) {
+    section{
+        position: absolute;
+        top: 0;
+        right:0;
+        height: 42vh;
+        width: 20vw;
+    }
 }

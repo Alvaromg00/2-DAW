@@ -1,0 +1,29 @@
+h1{
+    font-family: Edwardian Script ITC;
+    text-align: center;
+    font-size: 5rem;
+}
+
+table{
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-collapse: collapse;
+
+}
+#boton{
+    width: 100%;
+}
+tr td{
+    border: 1px solid black;
+}
+
+#tablaBody{
+    border-collapse: collapse;
+}
+th{
+    background-color: rgb(178, 231, 231);
+    border-bottom: 1px solid black;
+
+}

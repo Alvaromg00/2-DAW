@@ -1,0 +1,52 @@
+/*Selector de etiqueta*/
+h1{
+    color: aqua;
+}
+
+h2{
+    color: black;
+}
+
+p{
+    color: chocolate;
+}
+/*Selector múltiple*/
+h1, h2, p{
+    font-size: 22px;
+}
+/*Selector descendente, 2 ejemplos*/
+nav ul li{
+    color: crimson;
+}
+
+nav a{
+    color: gold;
+}
+/*Selector de clase, 2 ejemplos*/
+.p3{
+    font-size: 30px;
+}
+
+.link{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*selector de ID*/
+#parrafo2{
+    color: darkblue;
+}
+/*selector de hijo*/
+div>h1{
+    padding-left: 50px;
+}
+/*Selector adyacente*/
+h2 + p{
+    padding-left: 200px;
+}
+/*selector de atributos, 1 de cada tipo*/
+a[target]{
+    color: blue;
+}
+
+a[target="_self"]{
+    color: darkgreen;
+}

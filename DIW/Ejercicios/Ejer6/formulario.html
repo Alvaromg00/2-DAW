@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table align=center bgcolor="lightyellow">
+        <tr>
+            <th colspan="2" align="center" bgcolor="black">
+                <font color="white">FORMULARIO DE ALTA</font>
+            </th>
+        </tr>
+        <form action="servidor.php">
+            <tr><td>Nombre y Apellidos </td> <td><input type="text" name="nombre"></td></tr>
+            
+            <tr><td>Contraseña de acceso</td>  <td><input type="password" name="contraseña"></td></tr>
+            
+            <tr><td>Sexo </td><td>
+                <input type="radio" name="sexo" value="H"> Hombre
+                <input type="radio" name="sexo" value="M"> Mujer
+            </td></tr>
+            
+            <tr><td>Dirección postal </td> <td><textarea name="direccion" rows="4"></textarea></td></tr>
+            
+            <tr>
+                <td>Localidad </td> <td>
+                     <select name="localidad">
+                        <option value="caceres">Cáceres</option>
+                        <option value="Badajoz">Badajoz</option>
+                        <option value="caceres">Trujillo</option>
+                        <option value="caceres">Plasencia</option>
+                        <option value="caceres">Mérida</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr><td colspan="2" align="center"><input type="checkbox" name="suscripcion" value="si"> Deseo recibir boletines</td> </tr>
+            <tr><td colspan="2" align="center"><input type="submit" value="Realizar registro"></td></tr>
+        </form>
+    </table>
+</body>
+</html>

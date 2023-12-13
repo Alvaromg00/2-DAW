@@ -1,0 +1,32 @@
+/*Cambia el color del link a verde cuando esta siendo clickado*/
+a:active{
+    color: chartreuse;
+
+    box-shadow:2px 2px 1px #000;
+}
+
+/*Cambia el color del link a azul claro a los enlaces que han sido visitados*/
+a:visited{
+    color: red;
+}
+/*Pone en naranja los enlaces que aun no han sido visitados*/
+a:link{
+    color: darkorange;
+}
+
+/*Pone el color morado, cuando el input tiene el foco*/
+input:focus{
+    background-color: blueviolet;
+}
+/*Pone de color negro el enlace que tiene el puntero encima*/
+a:hover{
+    color: black;
+}
+/*Aplica un margen a la izquierda al primer hijo de li*/
+li:first-child{
+    margin-left: 75px;
+}
+/*Aplica un margen a la izquierda al segundo hijo de li*/
+li:nth-child(2){
+    margin-left: 35px;
+}
