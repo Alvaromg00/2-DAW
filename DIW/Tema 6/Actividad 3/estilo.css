@@ -1,0 +1,86 @@
+#contenedor{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.dado{
+    border-radius: 4%;
+    display: flex;
+    background-color: rgb(196, 5, 53);
+    height: 100px;
+    width: 100px;
+    margin-left: 2vw;
+}
+
+#uno{
+    align-items: center;
+    justify-content: center;
+}
+
+.punto{
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+#dos{
+    justify-content: space-between;
+}
+
+#punto2{
+    justify-self: end;
+    align-self: flex-end;
+}
+
+#punto4{
+    align-self: center;
+}
+
+#punto5{
+    align-self: flex-end;
+}
+
+#punto7{
+    align-self: flex-end;
+}
+
+#punto8{
+    align-self: flex-end;
+}
+
+#punto11{
+    align-self: flex-end;
+}
+
+#punto12{
+    align-self: center;
+}
+
+#punto13{
+    align-self: flex-end;
+}
+
+#punto16{
+    align-self: center;
+}
+
+#punto19{
+    align-self: center;
+}
+
+#punto17{
+    align-self: flex-end;
+}
+
+#punto18{
+    align-self: flex-end;
+}
+
+#cuatro{
+    flex-direction: column;
+}
