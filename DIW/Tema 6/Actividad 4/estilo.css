@@ -9,18 +9,35 @@
 .dado{
     border-radius: 4%;
     display: flex;
-    background-color: rgb(196, 5, 53);
+    background-color: white;
     height: 100px;
     width: 100px;
-    margin-left: 2vw;
 }
 
-.punto{
-    background-color: white;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
+.domino{
+    border-radius: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    flex-direction: column;
+    border: 2px solid black;
+}
 
+.separador{
+    background-color: black;
+    height: 5px;
+    width: 100px;
+    border-radius: 25%;
+}
+
+
+.punto{
+    background-color: black;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    margin: 5px;
 }
 
 #punto2{
