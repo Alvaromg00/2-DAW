@@ -15,21 +15,12 @@
     margin-left: 2vw;
 }
 
-#uno{
-    align-items: center;
-    justify-content: center;
-}
-
 .punto{
     background-color: white;
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    margin: 5px;
-}
 
-#dos{
-    justify-content: space-between;
 }
 
 #punto2{
@@ -42,14 +33,6 @@
 }
 
 #punto5{
-    align-self: flex-end;
-}
-
-#punto7{
-    align-self: flex-end;
-}
-
-#punto8{
     align-self: flex-end;
 }
 
@@ -81,6 +64,44 @@
     align-self: flex-end;
 }
 
+#uno{
+    align-items: center;
+    justify-content: center;
+}
+
+#dos{
+    justify-content: space-between;
+}
+
+#tres{
+    justify-content: space-between;
+}
+
 #cuatro{
+    justify-content: space-between;
+}
+
+#columna1{
+    height: 100px;
+    align-content: space-between;
+
+}
+
+#columna2{
+    height: 100px;
+    align-content: space-between;
+}
+
+
+
+#cinco{
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#seis{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
