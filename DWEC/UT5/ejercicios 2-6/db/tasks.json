@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "1",
+    "titulo": "Comprar",
+    "descripcion": "Ir al supermercado y comprar lo necesario",
+    "fecha_creacion": "2023-12-15--12:00:00 AM",
+    "estado": "pendiente"
+  },
+  {
+    "_id": "2",
+    "titulo": "Preparar presentación para reunión",
+    "descripcion": "Crear una presentación para la reunión del equipo",
+    "fecha_creacion": "2023-12-15--14:30:00PM",
+    "estado": "haciendo"
+  },
+  {
+    "_id": "3",
+    "titulo": "Hacer ejercicio",
+    "descripcion": "Realizar una sesión de entrenamiento",
+    "fecha_creacion": "2023-12-15--18:45:00PM",
+    "estado": "completada"
+  },
+  {
+    "_id": "4",
+    "titulo": "Estudiar para el examen",
+    "descripcion": "Repasar material y hacer ejercicios para el próximo examen",
+    "fecha_creacion": "2023-12-16--10:15:00PM",
+    "estado": "pendiente"
+  }
+]
