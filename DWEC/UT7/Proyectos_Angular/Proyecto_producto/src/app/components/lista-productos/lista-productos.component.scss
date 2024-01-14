@@ -1,0 +1,11 @@
+div.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div span{
+    font-weight: bold;
+    margin-left: 25px;
+    font-size: large;
+}
