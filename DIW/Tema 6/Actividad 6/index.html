@@ -8,33 +8,73 @@
 </head>
 <body>
     <header>
-        <img src="img/logo_IES.jpg" alt="Logo">
-        <h1>IES valle del jerte</h1>
-        <img src="img/logo_IyC.png" alt="Logo">
+        <img src="img/logo_IES.jpg" alt="Logo" class="logo">
+        <h1>IES Valle del jerte</h1>
+        <img src="img/logo_IyC.png" alt="Logo" class="logo">
     </header>
-    <main>
-        <nav>
-            <div class="opciones">
-                <p>Inicio</p>
-                <div class="op">Inicio</div>
+    <div id="main">
+        <div class="responsive-tabs">
+            <input class="estado" type="radio" title="tab-uno" name="tabs-estado" id="tab-uno" checked />
+            <input class="estado" type="radio" title="tab-dos" name="tabs-estado" id="tab-dos" />
+            <input class="estado" type="radio" title="tab-tres" name="tabs-estado" id="tab-tres" />
+            <input class="estado" type="radio" title="tab-cuatro" name="tabs-estado" id="tab-cuatro" />
+            <input class="estado" type="radio" title="tab-cinco" name="tabs-estado" id="tab-cinco" />
+            <div class="tabs flex-tabs">
+                <label for="tab-uno" id="tab-uno-label" class="tab">Inicio</label>
+                <label for="tab-dos" id="tab-dos-label" class="tab">Ciclos formativos</label>
+                <label for="tab-tres" id="tab-tres-label" class="tab">FCT</label>
+                <label for="tab-cuatro" id="tab-cuatro-label" class="tab">Contacto</label>
+                <label for="tab-cinco" id="tab-cinco-label" class="tab">Campus virtual</label>
+                <div id="tab-uno-panel" class="panel">
+                    <p>El IES Valle del jerte es uno de los centros de referencia en la ciudad de Plasencia.<br><br>
+                        Cuenta con 765 alumnos pertenecientes a:<br>
+                    <ul>
+                        <li>Educación Secundaria obligatoria</li>
+                        <li>Formación Profesional Básica</li>
+                        <li>Ciclo Formativo de Grado Medio</li>
+                        <li>Ciclo Formativo de Grado Superior</li>
+                    </ul>
+                    <img src="img/fotoIES.jpg" alt="">
+                    </p>
+                </div>
+                <div id="tab-dos-panel" class="panel">
+                    <img src="img/Ciclos.jpg" alt="ciclos" class="ciclos">
+                    <p>Ofrecemos una amplia oferta de Formación Profesional reglada de la familia de informática y Comunicaciones:<br><br>
+                        <ul>
+                            <li>Formación Profesional básica de <b>Informática de Oficina</b></li>
+                            <li>Ciclo Formativo de Grado Medio de <b>Sistemas Microinformáticos y Redes</b></li>
+                            <li>Ciclo Formativo de Grado Superior de <b>Desarrollo de Aplicaciones Multiplataforma</b></li>
+                            <li>Ciclo Formativo de Grado Superior de <b>Desarrollo de Aplicaciones Web</b></li>
+                            <li>Ciclo formativo de Grado Superior de <b>Administración de Sistemas Informáticos en Red</b></li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="tab-tres-panel" class="panel">
+                    <p>Colaboramos con decenas de empresas del sector para ofrecer oportunidades de empleo para nuestros alumnos egresados:<br><br>
+                    <img src="img/FCT.jpg" alt="" class="ciclos"><br><br><img src="img/ErasmusPlus.jpg" alt="erasmus" class="erasmus"></p>
+                </div>
+                <div id="tab-cuatro-panel" class="panel">
+                    <p><b>Direccion: </b>Calle Pedro y Francisco González, s/n, 10600 Plasencia, Cáceres<br>
+                    <b>Teléfono:</b> 927 01 77 74<br>
+                    <b>Email: </b>ies.valledeljerte@edu.juntaex.es <br><br></p>
+                    <div id="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.4474176696567!2d-6.089350723488943!3d40.04311517829345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3e10c000000001%3A0x8184db73d1c4f272!2sIES%20Valle%20del%20Jerte!5e0!3m2!1ses!2ses!4v1705333663360!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>
+                <div id="tab-cinco-panel" class="panel">
+                    <p>Disponemos de un Campus Virtual bajo la tecnología de Moodle para dar soporte a toda la docencia presencial de nuestros Ciclos Formativos<br><br>
+                    <img src="img/Moodle.jpg" alt="IES" class="ciclos"><br><br>
+                Puedes acceder a él a través de <a href="https://moodle.educarex.es/ccff_iesvjp/">este enlace</a></p>
+                </div>
             </div>
-            <div class="opciones">
-                <p>Ciclos formativos</p>
-                <div class="op">Ciclos</div>
-            </div>
-            <div class="opciones">
-                <p>FCT</p>
-                <div class="op">fct</div>
-            </div>
-            <div class="opciones">
-                <p>Contacto</p>
-                <div class="op">contacto</div>
-            </div>
-            <div class="opciones">
-                <p>Campus Virtual</p>
-                <div class="op">campus</div>
-            </div>
-        </nav>
-    </main>
+        </div>
+        <aside id="aside">
+            <img src="img/aside_FPB.png" alt="fpb" class="aside">
+            <img src="img/aside_SMR.png" alt="smr" class="aside">
+            <img src="img/aside_DAM.png" alt="dam" class="aside">
+            <img src="img/aside_DAW.png" alt="daw" class="aside">
+            <img src="img/aside_ASIR.png" alt="asir" class="aside">
+        </aside>
+    </div>
+    
+    <footer><p>Curso 2018/19 - Diseño de Interfaces Web</p></footer>
 </body>
 </html>

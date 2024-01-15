@@ -9,10 +9,42 @@ header{
     width: 100%;
 }
 
+h1{
+    font-size: 40px;
+}
+
 img{
+    height: 200px;
+    width: 400px;
+}
+
+img.ciclos{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 35%;
+    justify-self: center;
+    max-width: 500px;
+}
+
+img.erasmus{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 35%;
+    justify-self: center;
+    max-width: 500px;
+}
+
+div#mapa{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
     display: none;
-    height: 70px;
-    width: 115px;
+    height: 90px;
+    width: 145px;
     border-radius: 10%;
 }
 
@@ -22,16 +54,212 @@ main nav div.opciones p{
     border-bottom: 1px solid gray;
 }
 
+.flex-tabs {
+    flex-direction: column;
+}
+
 .op{
     display: none;
     color: black;
 }
 
-main nav div.opciones p:active{
-    background-color: rgb(65, 97, 243);
-    color: white;
+.responsive-tabs {
+    width: 92%;
 }
 
-main nav div.opciones p:active div.op {
+.responsive-tabs .estado {
+    display: none;
+}
+
+.responsive-tabs .flex-tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 10px solid white;
+}
+
+.responsive-tabs .flex-tabs .tab {
+    flex-grow: 1;
+}
+
+/* Configuración del panel. Por defecto todos ocultos */
+.responsive-tabs .flex-tabs .panel {
+    background-color: #FFF;
+    padding: 20px;
+    min-height: 250px;
+    width: 100%;
+    flex-basis: auto;
+    display: none;
+}
+
+.panel{
+    border-left: 1px solid rgb(65, 97, 243);
+    margin-bottom: 25px;
+}
+
+
+/* Configuración de los tabs. */
+.responsive-tabs .tab {
+    padding: 10px;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #AAA;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.responsive-tabs .tab:hover {
+    background-color: rgb(65, 97, 243);
+    color:white;
+}
+
+/* Al seleccionarlo cambiamos estilo del label */
+#tab-uno:checked~.tabs #tab-uno-label,
+#tab-dos:checked~.tabs #tab-dos-label,
+#tab-tres:checked~.tabs #tab-tres-label,
+#tab-cuatro:checked~.tabs #tab-cuatro-label,
+#tab-cinco:checked~.tabs #tab-cinco-label {
+    background-color: rgb(65, 97, 243);
+    cursor: default;
+    font-weight: bold;
+    color: white;
+    border-bottom: none;
+}
+
+/* Al seleccionar la etiqueta mostramos el panel */
+#tab-uno:checked~.tabs #tab-uno-panel,
+#tab-dos:checked~.tabs #tab-dos-panel,
+#tab-tres:checked~.tabs #tab-tres-panel,
+#tab-cuatro:checked~.tabs #tab-cuatro-panel,
+#tab-cinco:checked~.tabs #tab-cinco-panel {
     display: block;
+}
+
+footer{
+    background-color: rgb(65, 97, 243);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+}
+
+#aside{
+    display: none;
+}
+
+
+/* Configuración de vista Responsive */
+@media (min-width: 650px) {
+
+    .logo{
+        display: block;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .flex-tabs {
+        flex-direction: row;
+    }
+
+    .flex-tabs .tab {
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .flex-tabs .tab:last-of-type {
+        border-bottom: none;
+    }
+
+    iframe{
+        width: 600px;
+        height: 450px;
+    }
+
+    /* Asociamos cada etiqueta a cada panel para que se muestre forma correcta */
+
+    #tab-uno:checked~.tabs #tab-uno-label,
+    #tab-dos:checked~.tabs #tab-dos-label,
+    #tab-tres:checked~.tabs #tab-tres-label,
+    #tab-cuatro:checked~.tabs #tab-cuatro-label,
+    #tab-cinco:checked~.tabs #tab-cinco-label {
+        border-bottom: none;
+    }
+
+    #tab-uno:checked~.tabs #tab-uno-panel,
+    #tab-dos:checked~.tabs #tab-dos-panel,
+    #tab-tres:checked~.tabs #tab-tres-panel,
+    #tab-cuatro:checked~.tabs #tab-cuatro-panel,
+    #tab-cinco:checked~.tabs #tab-cinco-label {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .responsive-tabs .tab {
+        text-align: justify;
+    }
+
+
+.flex-tabs #tab-uno-label {
+    order: 1;
+}
+
+.flex-tabs #tab-dos-label {
+    order: 3;
+}
+
+.flex-tabs #tab-tres-label {
+    order: 5;
+}
+
+.flex-tabs #tab-cuatro-label {
+    order: 7;
+}
+
+.flex-tabs #tab-cinco-label {
+    order: 9;
+}
+
+.flex-tabs #tab-uno-panel {
+    order: 2;
+}
+
+.flex-tabs #tab-dos-panel {
+    order: 4;
+}
+
+.flex-tabs #tab-tres-panel {
+    order: 6;
+}
+
+.flex-tabs #tab-cuatro-panel {
+    order: 8;
+}
+
+.flex-tabs #tab-cinco-panel {
+    order: 10;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+#aside{
+    display: block;
+    width: 250px;
+    border: 1px solid rgb(65, 97, 243);
+}
+
+img.aside{
+    width: 250px;
+    height: 150px;
+}
+
 }
