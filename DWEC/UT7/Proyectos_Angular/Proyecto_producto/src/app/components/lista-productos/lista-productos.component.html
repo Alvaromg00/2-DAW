@@ -11,34 +11,20 @@
         </nav>
     </div>
     <div class="card-block">
-        <div class="table-responsive">
+        <div class="table-responsive" *ngIf="productos && productos.length">
             <table class="table table-striped table-dark table-hover">
                 <thead class="card-header">
                     <tr>
-                        <th>{{cabeceras.imagen}}</th>
                         <th>{{cabeceras.descripcion}}</th>
                         <th>{{cabeceras.precio}}</th>
                         <th>{{cabeceras.disponibilidad}}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img src="../../../assets/lenovo.jpg" alt="" style="height: 60px;"></td>
-                        <td>{{productos[0].nombre}}</td>
-                        <td>{{productos[0].precio}}</td>
-                        <td>{{productos[0].disponible}}</td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../../assets/ps5.jpg" alt="" style="height: 60px;"></td>
-                        <td>{{productos[1].nombre}}</td>
-                        <td>{{productos[1].precio}}</td>
-                        <td>{{productos[1].disponible}}</td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../../assets/xiaomi.jpg" alt="" style="height: 60px;"></td>
-                        <td>{{productos[2].nombre}}</td>
-                        <td>{{productos[2].precio}}</td>
-                        <td>{{productos[2].disponible}}</td>
+                    <tr *ngFor="let producto of productos">
+                        <td>{{producto.descripcion}}</td>
+                        <td>{{producto.precio}}</td>
+                        <td>{{producto.disponibilidad}}</td>
                     </tr>
                 </tbody>
             </table>

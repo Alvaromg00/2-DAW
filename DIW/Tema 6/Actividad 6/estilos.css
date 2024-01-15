@@ -1,0 +1,37 @@
+header{
+    background-color: rgb(65, 97, 243);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    width: 100%;
+}
+
+img{
+    display: none;
+    height: 70px;
+    width: 115px;
+    border-radius: 10%;
+}
+
+main nav div.opciones p{
+    color: gray;
+    font-size: 30px;
+    border-bottom: 1px solid gray;
+}
+
+.op{
+    display: none;
+    color: black;
+}
+
+main nav div.opciones p:active{
+    background-color: rgb(65, 97, 243);
+    color: white;
+}
+
+main nav div.opciones p:active div.op {
+    display: block;
+}

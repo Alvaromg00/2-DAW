@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProducto } from '../interfaces/i-producto';
 
 @Component({
   selector: 'app-lista-productos',
@@ -13,21 +14,30 @@ cabeceras={
   precio: "Precio",
   disponibilidad: "Disponibilidad"
 };
-productos=[
+productos: IProducto[]=[
   {
-    nombre: "Lenovo Ideapad",
-    precio: "460€",
-    disponible: "Sí"
+    id: 1,
+    descripcion: "Lenovo Ideapad",
+    disponibilidad: new Date('2020-12-02'),
+    precio: 460,
+    imagenUrl: 'assets/lenovo.jpg',
+    puntuacion: 4
   },
   {
-    nombre: "Playstation 5",
-    precio: "499€",
-    disponible: "No"
+    id: 2,
+    descripcion: "Playstation 5",
+    disponibilidad: new Date('2023-10-09'),
+    precio: 499,
+    imagenUrl: 'assets/ps5.jpg',
+    puntuacion: 5
   },
   {
-    nombre: "Xiaomi Redmi Note 13",
-    precio: "280€",
-    disponible: "Sí"
+    id: 2,
+    descripcion: "Xiaomi Redmi Note 13",
+    disponibilidad: new Date('2021-02-09'),
+    precio: 280,
+    imagenUrl: 'assets/xiaomi.jpg',
+    puntuacion: 4.2
   }
 ]
 }
