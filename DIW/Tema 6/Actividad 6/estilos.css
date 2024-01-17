@@ -91,7 +91,7 @@ main nav div.opciones p{
 }
 
 .responsive-tabs {
-    width: 92%;
+    margin-right: 42px;
 }
 
 .responsive-tabs .estado {
@@ -203,6 +203,7 @@ main nav div.opciones p{
 #tab-cuatro:checked~.tabs #tab-cuatro-panel,
 #tab-cinco:checked~.tabs #tab-cinco-panel {
     display: block;
+    border-bottom: 1px solid #ccc;
 }
 
 footer{
@@ -227,9 +228,52 @@ i.fa-brands{
 
 
 /* Configuración de vista Responsive */
-@media (min-width: 650px) {
+@media (min-width: 1110px) {
 
+ /* Asociamos cada etiqueta a cada panel para que se muestre forma correcta */
+ .flex-tabs #tab-uno-label {
+    order: 1;
+}
 
+.flex-tabs #tab-dos-label {
+    order: 2;
+}
+
+.flex-tabs #tab-tres-label {
+    order: 3;
+}
+
+.flex-tabs #tab-cuatro-label {
+    order: 4;
+}
+
+.flex-tabs #tab-cinco-label {
+    order: 5;
+}
+
+.flex-tabs #tab-uno-panel {
+    order: 6;
+}
+
+.flex-tabs #tab-dos-panel {
+    order: 7;
+}
+
+.flex-tabs #tab-tres-panel {
+    order: 8;
+}
+
+.flex-tabs #tab-cuatro-panel {
+    order: 9;
+}
+
+.flex-tabs #tab-cinco-panel {
+    order: 10;
+}
+
+.responsive-tabs .flex-tabs .tab {
+    flex-grow: 1;
+}
 
     .logo{
         display: block;
@@ -246,7 +290,6 @@ i.fa-brands{
     .flex-tabs .tab {
         background: #fff;
         border-bottom: 1px solid rgb(65, 97, 243);
-        
     }
 
     .flex-tabs .tab:last-of-type {
@@ -277,12 +320,18 @@ i.fa-brands{
     #tab-tres:checked~.tabs #tab-tres-panel,
     #tab-cuatro:checked~.tabs #tab-cuatro-panel,
     #tab-cinco:checked~.tabs #tab-cinco-panel {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid rgb(65, 97, 243);
+        height: 703px;
     }
 
 
     .responsive-tabs .tab {
         text-align: justify;
+        background-color: #eee;
+    }
+
+    .responsive-tabs{
+        margin-right: 0px;
     }
 
     #main{
@@ -292,11 +341,20 @@ i.fa-brands{
     }
 
 
+
     #aside{
         display: block;
         width: 250px;
+        height: 785px;
         border: 1px solid rgb(65, 97, 243);
-        height: 800px;
+    }
+
+    label{
+        width: 10%;
+    }
+
+    .tab p{
+        margin: 0;
     }
 
     img.aside{
