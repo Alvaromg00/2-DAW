@@ -1,0 +1,27 @@
+
+
+.negro{
+    background-color: rgb(66, 66, 66);
+    height: 140px;
+}
+
+.col-xl-12.azul{
+    background-color: rgb(132, 174, 209);
+    height: 140px;
+}
+
+.g-claro{
+    background-color: lightgray;
+    height: 240px;
+}
+
+.g-oscuro{
+    background-color: gray;
+    height: 240px;
+}
+
+@media screen and (min-width: 1200px) {
+    .col-12.azul{
+        display: block;
+    }
+}

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IProducto } from '../interfaces/i-producto';
+import { style } from '@angular/animations';
+import { NgIf, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-lista-productos',
@@ -7,6 +9,13 @@ import { IProducto } from '../interfaces/i-producto';
   styleUrl: './lista-productos.component.scss'
 })
 export class ListaProductosComponent {
+  anchoImagenes=100;
+  estilosPar={
+    'background-color': 'lightblue',
+  };
+  estilosImpar={
+    'background-color': 'blueviolet',
+  };
   titulo= "Lista de productos";
   cabeceras={
     id: "#",
@@ -41,4 +50,24 @@ export class ListaProductosComponent {
       puntuacion: 4.2
     },
   ];
+  mostrarPrecio(prod: IProducto){
+    alert(prod.precio)
+  }
+  mostrarImagenes: boolean = true;
+  claseBoton: string = 'btn-primary';
+
+  oculto=false;
+  textoBoton='Ocultar';
+  ClasesBoton={
+    'btn':true,
+    'btn-primary':false,
+    'btn-danger':true,
+  };
+
+  mostrarImagen(){
+    this.oculto=!this.oculto;
+    this.textoBoton=this.oculto ? 'Mostrar' : 'Ocultar'
+    this.ClasesBoton["btn-danger"]=!this.oculto
+    this.ClasesBoton["btn-primary"]=this.oculto
+  }
 }

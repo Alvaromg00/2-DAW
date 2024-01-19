@@ -12,22 +12,24 @@
     </div>
     <div class="card-block">
         <div class="table-responsive" *ngIf="productos && productos.length">
-            <table class="table table-striped table-dark table-hover">
+            <table class="table table-striped table-hover">
                 <thead class="card-header">
                     <tr>
                         <th>{{cabeceras.id}}</th>
-                        <th>{{cabeceras.imagen}}</th>
+                        <th><button (click)="mostrarImagen" [ngClass]="ClasesBoton">{{textoBoton}}</button></th>
                         <th>{{cabeceras.descripcion}}</th>
                         <th>{{cabeceras.precio}}</th>
                         <th>{{cabeceras.disponibilidad}}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let producto of productos; let i=index;">
-                        <td>{{i}} </td>
-                        <td><img [src]="producto.imagenUrl" style="width: 100px;"></td>
-                        <td>{{producto.descripcion}}</td>
-                        <td>{{producto.precio}}</td>
+                    <tr *ngFor="let producto of productos; let i=index; let esPar=even">
+                        <td [ngStyle]="{'background-color': esPar? 'green':'red'}">{{i}} </td>
+                        <td *ngIf="mostrarImagenes"><img [src]="producto.imagenUrl" [width]="anchoImagenes"></td>
+
+                        <td [ngStyle]="esPar? estilosPar:estilosImpar">
+                        {{producto.descripcion}}</td>
+                        <td (click)="mostrarPrecio(producto)" [ngClass]="{'precioPar':esPar==true, 'precioImpar':!esPar}">{{producto.precio}}</td>
                         <td>{{producto.disponibilidad}}</td>
                     </tr>
                 </tbody>
