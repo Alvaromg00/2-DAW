@@ -3,10 +3,7 @@
         <span>{{titulo}}</span>
         <nav class="navbar navbar-light bg-transparent">
             <div class="container-fluid">
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Buscar</button>
-              </form>
+                <input [(ngModel)]="filtroBusqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
             </div>
         </nav>
     </div>
@@ -16,22 +13,33 @@
                 <thead class="card-header">
                     <tr>
                         <th>{{cabeceras.id}}</th>
-                        <th><button (click)="mostrarImagen" [ngClass]="ClasesBoton">{{textoBoton}}</button></th>
+                        <th><button (click)="mostrarOcultarImagen()" [ngClass]="ClasesBoton">{{textoBoton}}</button></th>
                         <th>{{cabeceras.descripcion}}</th>
                         <th>{{cabeceras.precio}}</th>
                         <th>{{cabeceras.disponibilidad}}</th>
+                        <th>Puntuación</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let producto of productos; let i=index; let esPar=even">
-                        <td [ngStyle]="{'background-color': esPar? 'green':'red'}">{{i}} </td>
-                        <td *ngIf="mostrarImagenes"><img [src]="producto.imagenUrl" [width]="anchoImagenes"></td>
-
-                        <td [ngStyle]="esPar? estilosPar:estilosImpar">
-                        {{producto.descripcion}}</td>
-                        <td (click)="mostrarPrecio(producto)" [ngClass]="{'precioPar':esPar==true, 'precioImpar':!esPar}">{{producto.precio}}</td>
-                        <td>{{producto.disponibilidad}}</td>
-                    </tr>
+                    <ng-container *ngFor="let producto of productos; let i=index; let esPar=even">
+                        <tr *ngIf="producto.descripcion.toLowerCase().includes(filtroBusqueda.toLowerCase())">
+                            <td [ngStyle]="{'background-color': esPar? 'gray':'black'}" [ngClass]="'indiceEnBlanco'">{{i}} </td>
+                            <td *ngIf="mostrarImagenes"><img 
+                                [src]="producto.imagenUrl" 
+                                [width]="anchoImagenes" 
+                                [ngStyle]="{'display' : displayFotos}"></td>
+                    
+                            <td [ngStyle]="esPar? estilosPar:estilosImpar">
+                            {{producto.descripcion}}</td>
+                            <td (click)="mostrarPrecio(producto)" [ngClass]="{'precioPar':esPar==true, 'precioImpar':!esPar}">{{producto.precio | currency:'EUR'}}</td>
+                            <td>{{producto.disponibilidad | date:'dd/MM/yyyy'}}</td>
+                            <td>
+                                <mat-icon *ngFor="let _ of getRange(5); let i = index" [style.color]="getColor(i, producto.id)">
+                                  star
+                                </mat-icon>
+                              </td>
+                        </tr>
+                    </ng-container>
                 </tbody>
             </table>
         </div>

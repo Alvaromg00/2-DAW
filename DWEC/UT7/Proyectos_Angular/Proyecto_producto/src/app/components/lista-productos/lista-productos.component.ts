@@ -9,12 +9,13 @@ import { NgIf, NgStyle } from '@angular/common';
   styleUrl: './lista-productos.component.scss'
 })
 export class ListaProductosComponent {
+
   anchoImagenes=100;
   estilosPar={
     'background-color': 'lightblue',
   };
   estilosImpar={
-    'background-color': 'blueviolet',
+    'background-color': 'aqua',
   };
   titulo= "Lista de productos";
   cabeceras={
@@ -24,6 +25,7 @@ export class ListaProductosComponent {
     precio: "Precio",
     disponibilidad: "Disponibilidad"
   };
+
   productos: IProducto[]=[
     {
       id: 1,
@@ -42,7 +44,7 @@ export class ListaProductosComponent {
       puntuacion: 5
     },
     {
-      id: 2,
+      id: 3,
       descripcion: "Xiaomi Redmi Note 13",
       disponibilidad: new Date('2021-02-09'),
       precio: 280,
@@ -58,16 +60,28 @@ export class ListaProductosComponent {
 
   oculto=false;
   textoBoton='Ocultar';
+  displayFotos='block';
   ClasesBoton={
     'btn':true,
     'btn-primary':false,
     'btn-danger':true,
   };
 
-  mostrarImagen(){
+  mostrarOcultarImagen(){
+    this.textoBoton=!this.oculto ? 'Mostrar' : 'Ocultar'
+    this.ClasesBoton["btn-danger"]=this.oculto
+    this.ClasesBoton["btn-primary"]=!this.oculto
+    this.displayFotos=this.oculto ? 'block' : 'none'
     this.oculto=!this.oculto;
-    this.textoBoton=this.oculto ? 'Mostrar' : 'Ocultar'
-    this.ClasesBoton["btn-danger"]=!this.oculto
-    this.ClasesBoton["btn-primary"]=this.oculto
+  }
+
+  filtroBusqueda: string = '';
+
+  getRange(value: number): number[] {
+    return new Array(value);
+  }
+
+  getColor(index: number, productId: number): string {
+    return productId % 2 == 1 && index == 4 ? 'gray' : 'yellow';
   }
 }

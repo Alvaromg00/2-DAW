@@ -1,27 +1,49 @@
-
-
 .negro{
     background-color: rgb(66, 66, 66);
     height: 140px;
 }
 
-.col-xl-12.azul{
+.azul{
     background-color: rgb(132, 174, 209);
     height: 140px;
+    display: none;
 }
 
 .g-claro{
     background-color: lightgray;
-    height: 240px;
+    height: 300px;
 }
 
 .g-oscuro{
     background-color: gray;
-    height: 240px;
+    height: 300px;
+}
+
+.footer{
+    height: 120px;
+    background-color: rgb(46, 46, 46);
+}
+
+@media screen and (min-width: 769px) {
+    .g-claro{
+        height: 250px;
+    }
+
+    .g-oscuro{
+        height: 250px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    .col-12.azul{
+    .g-claro{
+        height: 200px;
+    }
+
+    .azul{
         display: block;
+    }
+
+    .g-oscuro{
+        height: 200px;
     }
 }
