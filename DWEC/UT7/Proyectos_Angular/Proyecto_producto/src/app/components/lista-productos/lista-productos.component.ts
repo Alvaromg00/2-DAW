@@ -33,7 +33,7 @@ export class ListaProductosComponent {
       disponibilidad: new Date('2020-12-02'),
       precio: 460,
       imagenUrl: 'assets/lenovo.jpg',
-      puntuacion: 4
+      puntuacion: 1
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ export class ListaProductosComponent {
       disponibilidad: new Date('2021-02-09'),
       precio: 280,
       imagenUrl: 'assets/xiaomi.jpg',
-      puntuacion: 4.2
+      puntuacion: 4
     },
   ];
   mostrarPrecio(prod: IProducto){
@@ -77,11 +77,4 @@ export class ListaProductosComponent {
 
   filtroBusqueda: string = '';
 
-  getRange(value: number): number[] {
-    return new Array(value);
-  }
-
-  getColor(index: number, productId: number): string {
-    return productId % 2 == 1 && index == 4 ? 'gray' : 'yellow';
-  }
 }

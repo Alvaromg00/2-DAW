@@ -1,11 +1,11 @@
 <div class="card">
     <div class="card-header bg-success text-white">
         <span>{{titulo}}</span>
-        <nav class="navbar navbar-light bg-transparent">
-            <div class="container-fluid">
-                <input [(ngModel)]="filtroBusqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <div id="busqueda">
+                <mat-icon>search</mat-icon>
+                <label for="buscar">Buscar</label>
+                <input [(ngModel)]="filtroBusqueda" class="form-control me-2" type="search" placeholder="Buscar" name="buscar" id="buscar" aria-label="Search">
             </div>
-        </nav>
     </div>
     <div class="card-block">
         <div class="table-responsive" *ngIf="productos && productos.length">
@@ -23,18 +23,18 @@
                 <tbody>
                     <ng-container *ngFor="let producto of productos; let i=index; let esPar=even">
                         <tr *ngIf="producto.descripcion.toLowerCase().includes(filtroBusqueda.toLowerCase())">
-                            <td [ngStyle]="{'background-color': esPar? 'gray':'black'}" [ngClass]="'indiceEnBlanco'">{{i}} </td>
-                            <td *ngIf="mostrarImagenes"><img 
+                            <td [ngStyle]="{'background-color': esPar? 'gray':'black'}" [ngClass]="'indiceEnBlanco'">{{producto.id}} </td>
+                            <td *ngIf="mostrarImagenes" [ngClass]="'centro'"><img 
                                 [src]="producto.imagenUrl" 
                                 [width]="anchoImagenes" 
-                                [ngStyle]="{'display' : displayFotos}"></td>
-                    
+                                [ngStyle]="{'display' : displayFotos}"></td>          
+                                         
                             <td [ngStyle]="esPar? estilosPar:estilosImpar">
                             {{producto.descripcion}}</td>
                             <td (click)="mostrarPrecio(producto)" [ngClass]="{'precioPar':esPar==true, 'precioImpar':!esPar}">{{producto.precio | currency:'EUR'}}</td>
                             <td>{{producto.disponibilidad | date:'dd/MM/yyyy'}}</td>
                             <td>
-                                <mat-icon *ngFor="let _ of getRange(5); let i = index" [style.color]="getColor(i, producto.id)">
+                                <mat-icon *ngFor="let estrella of [1, 2, 3, 4, 5];" [ngClass]="{'estrella_amarilla':estrella<=producto.puntuacion, 'estrella_gris': estrella>producto.puntuacion}">
                                   star
                                 </mat-icon>
                               </td>
