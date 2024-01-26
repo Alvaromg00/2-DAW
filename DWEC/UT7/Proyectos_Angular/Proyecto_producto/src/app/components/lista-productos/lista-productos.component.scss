@@ -5,9 +5,18 @@ div.card-header{
 }
 
 div span{
-    font-weight: bold;
+    font-weight: 400;
     margin-left: 25px;
     font-size: large;
+}
+
+#busqueda{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#busqueda label{
+    margin: 0 10px;
 }
 
 .precioPar{
@@ -20,4 +29,17 @@ div span{
 
 .indiceEnBlanco{
     color: white;
+}
+
+.estrella_amarilla{
+    color: rgb(212, 182, 9);
+}
+
+.estrella_gris{
+    color: gray;
+}
+
+.centro{
+    display: grid;
+    place-items: center;
 }
