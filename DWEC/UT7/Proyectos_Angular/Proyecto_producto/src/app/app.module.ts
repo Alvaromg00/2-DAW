@@ -6,16 +6,18 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon';
+import { FiltroProductosPipe } from './pipes/filtro-productos.pipe';
+import { ItemProductoComponent } from './components/item-producto/item-producto.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, ListaProductosComponent],
+  declarations: [AppComponent, ListaProductosComponent, ItemProductoComponent, FiltroProductosPipe],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [

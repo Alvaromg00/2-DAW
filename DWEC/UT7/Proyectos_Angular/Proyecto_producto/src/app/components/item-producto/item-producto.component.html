@@ -1,1 +1,16 @@
-<p>item-producto works!</p>
+<tr>
+        <td>
+            <img [ngClass]="verImagenes? 'd-none' : 'd-inline'"
+                    [src]="producto.imagenUrl"
+                    [style.width]="150+'px'">
+        </td>
+        <td>{{producto.descripcion}}</td>
+        <td (click)="mostrarPrecio()">{{producto.precio | currency: "EUR"}}</td>
+        <td>{{producto.disponibilidad}}</td>
+        <td [title]="producto.puntuacion">
+            <mat-icon *ngFor="let estrella of [1, 2, 3, 4, 5];" [ngClass]="{'estrella_amarilla':estrella<=producto.puntuacion, 'estrella_gris': estrella>producto.puntuacion}">
+                star
+              </mat-icon>
+        </td>
+    </tr>
+

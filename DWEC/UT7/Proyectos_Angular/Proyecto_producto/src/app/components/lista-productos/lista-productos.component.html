@@ -21,8 +21,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <ng-container *ngFor="let producto of productos; let i=index; let esPar=even">
-                        <tr *ngIf="producto.descripcion.toLowerCase().includes(filtroBusqueda.toLowerCase())">
+                    <ng-container>
+                        <tr *ngFor="let producto of productos | filtroProductos: filtroBusqueda; let i=index; let esPar=even">
                             <td [ngStyle]="{'background-color': esPar? 'gray':'black'}" [ngClass]="'indiceEnBlanco'">{{producto.id}} </td>
                             <td *ngIf="mostrarImagenes" [ngClass]="'centro'"><img 
                                 [src]="producto.imagenUrl" 

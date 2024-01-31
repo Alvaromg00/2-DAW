@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
-import { IProducto } from '../interfaces/i-producto';
+import { Component, OnInit } from '@angular/core';
 import { style } from '@angular/animations';
 import { NgIf, NgStyle } from '@angular/common';
+import { IProducto } from '../../interfaces/i-producto';
 
 @Component({
   selector: 'app-lista-productos',
   templateUrl: './lista-productos.component.html',
   styleUrl: './lista-productos.component.scss'
 })
-export class ListaProductosComponent {
+export class ListaProductosComponent implements OnInit{
 
+  ngOnInit(): void {
+      
+  }
   anchoImagenes=100;
   estilosPar={
     'background-color': 'lightblue',
