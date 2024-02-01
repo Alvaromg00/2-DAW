@@ -1,16 +1,18 @@
 <tr>
-        <td>
-            <img [ngClass]="verImagenes? 'd-none' : 'd-inline'"
-                    [src]="producto.imagenUrl"
-                    [style.width]="150+'px'">
-        </td>
-        <td>{{producto.descripcion}}</td>
-        <td (click)="mostrarPrecio()">{{producto.precio | currency: "EUR"}}</td>
-        <td>{{producto.disponibilidad}}</td>
-        <td [title]="producto.puntuacion">
-            <mat-icon *ngFor="let estrella of [1, 2, 3, 4, 5];" [ngClass]="{'estrella_amarilla':estrella<=producto.puntuacion, 'estrella_gris': estrella>producto.puntuacion}">
-                star
-              </mat-icon>
-        </td>
-    </tr>
+    <td [ngClass]="'indiceEnBlanco'">{{producto.id}} </td>
+    <td *ngIf="mostrarImagenes" [ngClass]="'centro'"><img 
+        [src]="producto.imagenUrl" 
+        [width]="anchoImagenes" 
+        [ngStyle]="{'display' : displayFotos}"></td>          
+                 
+    <td>
+    {{producto.descripcion}}</td>
+    <td (click)="mostrarPrecio(producto)">{{producto.precio | currency:'EUR'}}</td>
+    <td>{{producto.disponibilidad | date:'dd/MM/yyyy'}}</td>
+    <td>
+        <mat-icon *ngFor="let estrella of [1, 2, 3, 4, 5];" [ngClass]="{'estrella_amarilla':estrella<=producto.puntuacion, 'estrella_gris': estrella>producto.puntuacion}">
+          star
+        </mat-icon>
+      </td>
+</tr>
 

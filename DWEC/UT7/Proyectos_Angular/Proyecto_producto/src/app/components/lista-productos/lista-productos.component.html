@@ -21,25 +21,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <ng-container>
-                        <tr *ngFor="let producto of productos | filtroProductos: filtroBusqueda; let i=index; let esPar=even">
-                            <td [ngStyle]="{'background-color': esPar? 'gray':'black'}" [ngClass]="'indiceEnBlanco'">{{producto.id}} </td>
-                            <td *ngIf="mostrarImagenes" [ngClass]="'centro'"><img 
-                                [src]="producto.imagenUrl" 
-                                [width]="anchoImagenes" 
-                                [ngStyle]="{'display' : displayFotos}"></td>          
-                                         
-                            <td [ngStyle]="esPar? estilosPar:estilosImpar">
-                            {{producto.descripcion}}</td>
-                            <td (click)="mostrarPrecio(producto)" [ngClass]="{'precioPar':esPar==true, 'precioImpar':!esPar}">{{producto.precio | currency:'EUR'}}</td>
-                            <td>{{producto.disponibilidad | date:'dd/MM/yyyy'}}</td>
-                            <td>
-                                <mat-icon *ngFor="let estrella of [1, 2, 3, 4, 5];" [ngClass]="{'estrella_amarilla':estrella<=producto.puntuacion, 'estrella_gris': estrella>producto.puntuacion}">
-                                  star
-                                </mat-icon>
-                              </td>
-                        </tr>
-                    </ng-container>
+                    <item-producto *ngFor="let producto of productos | filtroProductos:filtroBusqueda"></item-producto>
                 </tbody>
             </table>
         </div>
