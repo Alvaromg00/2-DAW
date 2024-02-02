@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { IProducto } from '../../interfaces/i-producto';
 
 @Component({
-  selector: 'item-producto',
+  selector: 'item-producto, [item-producto]' ,
   templateUrl: './item-producto.component.html',
   styleUrl: './item-producto.component.scss'
 })
