@@ -21,7 +21,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr item-producto *ngFor="let producto of productos | filtroProductos:filtroBusqueda"></tr>
+                    <tr *ngFor="let producto of productos | filtroProductos: filtroBusqueda" item-producto [producto]="producto" [displayFotos]="displayFotos">
+                    </tr>
                 </tbody>
             </table>
         </div>

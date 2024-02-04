@@ -1,0 +1,4 @@
+<span (mouseleave)="restaurarEstrellas()" *ngFor="let number of [1,2,3,4,5]">
+  <mat-icon (mouseenter)="numEstrellasAux=number" (click)="setPuntuacion()" [ngClass]="number <= numEstrellasAux? 'text-warning':''">
+  star_rate</mat-icon>
+</span>

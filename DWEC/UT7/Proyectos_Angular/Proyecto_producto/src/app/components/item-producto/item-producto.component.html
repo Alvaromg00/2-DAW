@@ -1,18 +1,14 @@
-
-    <td [ngClass]="'indiceEnBlanco'">{{producto.id}} </td>
-    <td *ngIf="mostrarImagenes" [ngClass]="'centro'"><img 
+<td>{{producto.id}} </td>
+    <td><img 
         [src]="producto.imagenUrl" 
         [width]="anchoImagenes" 
-        [ngStyle]="{'display' : displayFotos}"></td>          
-                 
+        [ngStyle]="{'display' : displayFotos}"></td>                   
     <td>
     {{producto.descripcion}}</td>
     <td (click)="mostrarPrecio(producto)">{{producto.precio | currency:'EUR'}}</td>
     <td>{{producto.disponibilidad | date:'dd/MM/yyyy'}}</td>
-    <td>
-        <mat-icon *ngFor="let estrella of [1, 2, 3, 4, 5];" [ngClass]="{'estrella_amarilla':estrella<=producto.puntuacion, 'estrella_gris': estrella>producto.puntuacion}">
-          star
-        </mat-icon>
-      </td>
-
-
+    <td [title]="producto.puntuacion">
+        <estrellas-rating [numEstrellas]="producto.puntuacion"
+        (numEstrellascambiadas)="producto.puntuacion=$event">
+        </estrellas-rating>
+    </td>

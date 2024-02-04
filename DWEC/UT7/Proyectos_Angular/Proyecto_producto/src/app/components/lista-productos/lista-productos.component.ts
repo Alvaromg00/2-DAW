@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { style } from '@angular/animations';
-import { NgIf, NgStyle } from '@angular/common';
 import { IProducto } from '../../interfaces/i-producto';
+import { CargaProductoService } from '../../servicios/carga-producto.service';
 
 @Component({
   selector: 'app-lista-productos',
@@ -10,9 +9,14 @@ import { IProducto } from '../../interfaces/i-producto';
 })
 export class ListaProductosComponent implements OnInit{
 
-  ngOnInit(): void {
-      
+  productos: IProducto[] | undefined;
+
+  constructor(private cargaProducto: CargaProductoService) {}
+
+  ngOnInit() {
+      this.productos=this.cargaProducto.getProductos();
   }
+
   anchoImagenes=100;
   estilosPar={
     'background-color': 'lightblue',
@@ -29,36 +33,10 @@ export class ListaProductosComponent implements OnInit{
     disponibilidad: "Disponibilidad"
   };
 
-  productos: IProducto[]=[
-    {
-      id: 1,
-      descripcion: "Lenovo Ideapad",
-      disponibilidad: new Date('2020-12-02'),
-      precio: 460,
-      imagenUrl: 'assets/lenovo.jpg',
-      puntuacion: 1
-    },
-    {
-      id: 2,
-      descripcion: "Playstation 5",
-      disponibilidad: new Date('2023-10-09'),
-      precio: 499,
-      imagenUrl: 'assets/ps5.jpg',
-      puntuacion: 5
-    },
-    {
-      id: 3,
-      descripcion: "Xiaomi Redmi Note 13",
-      disponibilidad: new Date('2021-02-09'),
-      precio: 280,
-      imagenUrl: 'assets/xiaomi.jpg',
-      puntuacion: 4
-    },
-  ];
+  
   mostrarPrecio(prod: IProducto){
     alert(prod.precio)
   }
-  mostrarImagenes: boolean = true;
   claseBoton: string = 'btn-primary';
 
   oculto=false;
