@@ -10,7 +10,6 @@ export class ItemProductoComponent implements OnInit{
   @Input() producto: IProducto | any;
   @Input() displayFotos:  | any;
 
-
   constructor(){ }
 
   mostrarPrecio(prod: IProducto){
