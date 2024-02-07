@@ -11,6 +11,7 @@ import { style } from '@angular/animations';
 export class AreaSeleccionComponent implements OnInit{
 
   luchadores: ILuchador[] | undefined;
+  indiceSelected: number=-1;
 
   constructor(private cargaLuchador: CargarLuchadoresService){}
 

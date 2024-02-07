@@ -2,8 +2,9 @@
     <img
       [src]="luchador?.retrato"
       [alt]="luchador?.nombre"
-      [ngStyle]="{'border': estaHover ? '3px solid ' + luchador?.colorAsociado : 'none'}"
+      [ngStyle]="{'border': (estaHover || estaSeleccionado) ? '3px solid ' + luchador?.colorAsociado : 'none'}"
       (mouseenter)="hoverImage(true)"
       (mouseleave)="hoverImage(false)"
+      (click)="clickImage()"
     />
   </div>
