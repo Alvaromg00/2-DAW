@@ -1,0 +1,16 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+    color: rgb(164, 67, 194);
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.areaSeleccion{
+    width: 100%;
+    margin-top: 10%;
+    background-color: rgb(164, 67, 194);
+    height: 350px;
+    border-radius: 10px;
+    border: 3px solid gold;
+}
