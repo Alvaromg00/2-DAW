@@ -10,16 +10,12 @@ import { style } from '@angular/animations';
 })
 export class AreaSeleccionComponent implements OnInit{
 
-  luchadores: ILuchador[] = [];
+  luchadores: ILuchador[] | undefined;
 
   constructor(private cargaLuchador: CargarLuchadoresService){}
 
   ngOnInit(){
     this.luchadores=this.cargaLuchador.getLuchadores();
-  }
-
-  bordeColor(){
-    
   }
 
 }

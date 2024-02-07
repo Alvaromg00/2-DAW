@@ -1,1 +1,9 @@
-<img src={{luchador?.retrato}} alt={{luchador?.nombre}} style="height: 118px; width: 115px;">
+<div class="retrato-luchador">
+    <img
+      [src]="luchador?.retrato"
+      [alt]="luchador?.nombre"
+      [ngStyle]="{'border': estaHover ? '3px solid ' + luchador?.colorAsociado : 'none'}"
+      (mouseenter)="hoverImage(true)"
+      (mouseleave)="hoverImage(false)"
+    />
+  </div>
