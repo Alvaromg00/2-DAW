@@ -1,8 +1,18 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 luchador" *ngFor="let luchador of luchadores">
-      <app-retrato-luchador [luchador]="luchador" [indiceSelected]="indiceSelected"></app-retrato-luchador>
+    <div class="col-md-6 luchador" *ngFor="let luchador of luchadores; let i = index">
+      <app-retrato-luchador [luchador]="luchador" [indiceLuchador]="i" [indiceSeleccionado]="indiceSeleccionado" (luchadorSeleccionado)="mostrarNombreLuchador($event)"></app-retrato-luchador>
     </div>
-    <div></div>
+  </div>
+  <div class="personaje" *ngIf="luchadorSeleccionado">
+    <img class="animacion" src="{{luchadorSeleccionado.animacion}}" alt="">
+    <div class="datos">
+      <div class="nombre">{{ luchadorSeleccionado.nombre }}</div>
+      <div class="atributos">
+        <div class="atributo">Fuerza: {{luchadorSeleccionado.fuerza}}</div>
+        <div class="atributo">Destreza: {{luchadorSeleccionado.destreza}}</div>
+        <div class="atributo">Vida: {{luchadorSeleccionado.vida}}</div>
+      </div>
+    </div>
   </div>
 </div>

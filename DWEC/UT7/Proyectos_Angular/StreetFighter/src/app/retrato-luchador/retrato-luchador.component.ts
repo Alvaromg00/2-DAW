@@ -9,21 +9,18 @@ import { ILuchador } from '../interfaces/iluchador';
 export class RetratoLuchadorComponent {
 
   @Input() luchador: ILuchador | undefined;
-  @Input() indiceSelected: number | undefined;
-  @Output() hover = new EventEmitter<boolean>();
-  @Output() seleccionado = new EventEmitter<boolean>();
+  @Input() indiceLuchador: number = -1;
+  @Input() indiceSeleccionado: number = -1;
+  @Output() luchadorSeleccionado = new EventEmitter<number>();
 
-  estaHover: boolean = false;
-  estaSeleccionado: boolean = false;
+  hover: boolean = false;
 
   hoverImage(estaHover: boolean): void {
-    this.estaHover = estaHover;
-    this.hover.emit(estaHover);
+    this.hover = estaHover;
   }
 
   clickImage(): void {
-    this.estaSeleccionado = !this.estaSeleccionado;
-    this.seleccionado.emit(this.estaSeleccionado);
+    this.luchadorSeleccionado.emit(this.indiceLuchador);
   }
 
 }

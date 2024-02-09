@@ -1,10 +1,11 @@
-<div class="retrato-luchador">
-    <img
-      [src]="luchador?.retrato"
-      [alt]="luchador?.nombre"
-      [ngStyle]="{'border': (estaHover || estaSeleccionado) ? '3px solid ' + luchador?.colorAsociado : 'none'}"
-      (mouseenter)="hoverImage(true)"
-      (mouseleave)="hoverImage(false)"
-      (click)="clickImage()"
-    />
-  </div>
+<div class="retrato-luchador" (click)="clickImage()">
+  <img
+    [src]="luchador?.retrato"
+    [alt]="luchador?.nombre"
+    [ngStyle]="{ 
+      'border': (hover || indiceLuchador === indiceSeleccionado) ? '3px solid ' + luchador?.colorAsociado : 'none'
+    }"
+    (mouseenter)="hoverImage(true)"
+    (mouseleave)="hoverImage(false)"
+  />
+</div>
