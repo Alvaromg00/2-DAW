@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {ILuchador} from "../interfaces/iluchador";
 import { CargarLuchadoresService} from "../servicios/cargar-luchadores.service";
 
@@ -28,7 +28,5 @@ export class AreaSeleccionComponent implements OnInit{
     }
     this.luchadorSeleccionado = this.luchadores ? (this.indiceSeleccionado !== -1 ? this.luchadores[this.indiceSeleccionado] : null) : null;
   }
-  
-
 
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 luchador" *ngFor="let luchador of luchadores; let i = index">
-      <app-retrato-luchador [luchador]="luchador" [indiceLuchador]="i" [indiceSeleccionado]="indiceSeleccionado" (luchadorSeleccionado)="mostrarNombreLuchador($event)"></app-retrato-luchador>
+      <app-retrato-luchador [luchador]="luchador" [indiceSeleccionado]="indiceSeleccionado" [indiceLuchador]="i" (luchadorSeleccionado)="mostrarNombreLuchador($event)"></app-retrato-luchador>
     </div>
   </div>
   <div class="personaje" *ngIf="luchadorSeleccionado">
