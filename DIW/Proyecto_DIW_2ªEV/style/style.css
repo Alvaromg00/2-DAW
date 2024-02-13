@@ -1,0 +1,22 @@
+.nombre{
+    font-family: 'Honk', system-ui;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 85px;
+}
+
+main{
+    margin-top: 65px;
+}
+
+.carousel-item{
+    max-height: 1100px;
+}
+
+.lanzamientos{
+    padding-bottom: 75px;
+}

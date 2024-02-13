@@ -9,10 +9,11 @@
     <div class="datos">
       <div class="nombre">{{ luchadorSeleccionado.nombre }}</div>
       <div class="atributos">
-        <div class="atributo">Fuerza: {{luchadorSeleccionado.fuerza}}</div>
-        <div class="atributo">Destreza: {{luchadorSeleccionado.destreza}}</div>
-        <div class="atributo">Vida: {{luchadorSeleccionado.vida}}</div>
+        <app-atributos-luchador nombreAtributo="FUERZA" [valorAtributo]="luchadorSeleccionado?.fuerza"></app-atributos-luchador>
+        <app-atributos-luchador nombreAtributo="DESTREZA" [valorAtributo]="luchadorSeleccionado?.destreza"></app-atributos-luchador>
+        <app-atributos-luchador nombreAtributo="VIDA" [valorAtributo]="luchadorSeleccionado?.vida"></app-atributos-luchador>
       </div>
+      
     </div>
   </div>
 </div>
