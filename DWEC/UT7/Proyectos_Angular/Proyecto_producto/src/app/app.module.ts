@@ -9,6 +9,7 @@ import { FiltroProductosPipe } from './pipes/filtro-productos.pipe';
 import { ItemProductoComponent } from './components/item-producto/item-producto.component';
 import { EstrellasRatingComponent } from './components/estrellas-rating/estrellas-rating.component';
 import { CargaProductoService } from './servicios/carga-producto.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CargaProductoService } from './servicios/carga-producto.service';
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
+    HttpClientModule
   ],
   providers: [CargaProductoService],
   bootstrap: [
