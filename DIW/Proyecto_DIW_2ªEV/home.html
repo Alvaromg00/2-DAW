@@ -14,81 +14,112 @@
 </head>
 <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(26, 17, 63);">
+      <nav class="navbar navbar-expand-lg fixed-top border-bottom border-dark" style="background-color: rgb(26, 17, 63);">
         <div class="container-fluid"><a href="#"><i class="fa-brands fa-d-and-d fa-3x" style="color: #92750c;"></i></a>
           <a class="nombre" href="#">GameHub</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-          <ul class="navbar-nav me-auto mb-2 mg-lg-0"> 
-</ul>
-          <form class="d-flex">
-            <a href="noticias.html" class="nav-link text-white m-2">Noticias</a>
-            <a href="galeria.html" class="nav-link text-white m-2">Galería</a>
-            <a href="ranking.html" class="nav-link text-white m-2">Rankings</a>
-            <a href="contacto.html" class="nav-link text-white m-2">Contacto</a>
-          </form>
+          <ul class="navbar-nav me-auto mb-2 mg-lg-0 m-3">
+            <li><a href="noticias.html" class="nav-link text-white m-2">Noticias</a></li> 
+            <li><a href="galeria.html" class="nav-link text-white m-2">Galería</a></li>
+            <li><a href="ranking.html" class="nav-link text-white m-2">Rankings</a></li>
+            <li><a href="contacto.html" class="nav-link text-white m-2">Contacto</a></li>
+          </ul>
         </div>
       </div>
       </nav>
     </div>
     <main>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/aw.jpg" class="d-block w-100" alt="...">
+      <div class="d-flex justify-content-center">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/aw.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/er.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/rdr2.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/gtaV.jpg" class="d-block w-100" alt="...">
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="assets/er.jpeg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/rdr2.jpeg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/gtaV.jpg" class="d-block w-100" alt="...">
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      <div class="lanzamientos m-5">
-        <h2 class="text-primary">Próximos lanzamientos</h1>
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Biomutant
-              <span class="badge badge-primary badge-pill">14/02/2024</span>
+      <div class="datos">
+        <div class="ultNoticias m-5">
+          <h2 class="text-primary">Últimas noticias</h2>
+          <a href="noticias.html"><ul class="list-group col-12 border border-info">
+            <li class="list-group-item a d-flex justify-content-between align-items-center">
+              Final Fantasy VII se actualiza para mejorar los gráficos días antes del lanzamiento
+              <span class="badge badge-primary badge-pill bg-success">16m</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Lords of Exile
-              <span class="badge badge-primary badge-pill">14/02/2024</span>
+            <li class="list-group-item a d-flex justify-content-between align-items-center">
+              Sony quiere ganar más dinero llevando los juegos de PlayStation a otras plataformas
+              <span class="badge badge-primary badge-pill bg-success">35m</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Tomb Raider 1-3 Remastered
-              <span class="badge badge-primary badge-pill">14/02/2024</span>
+            <li class="list-group-item a d-flex justify-content-between align-items-center">
+              La saga Need for Speed está a precio de risa en Steam con descuentos de hasta el 95%
+              <span class="badge badge-primary badge-pill bg-success">3h</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Mario vs. Donkey Kong
-              <span class="badge badge-primary badge-pill">16/02/2024</span>
+            <li class="list-group-item a d-flex justify-content-between align-items-center">
+              Los creadores de Helldivers 2 buscan fichar para acelerar sus planes de contenido gratuito
+              <span class="badge badge-primary badge-pill bg-success">18h</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Skull and Bones
-              <span class="badge badge-primary badge-pill">16/02/2024</span>
+            <li class="list-group-item a d-flex justify-content-between align-items-center">
+              El presidente de Sony cree que sus estudios necesitan mejorar "en la parte de negocio"
+              <span class="badge badge-primary badge-pill bg-success">20h</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Pacific Drive
-              <span class="badge badge-primary badge-pill">22/02/2024</span>
+            <li class="list-group-item a d-flex justify-content-between align-items-center">
+              El catálogo de PS Plus Extra y Premium recibirá estos 13 nuevos juegos en febrero de 2024
+              <span class="badge badge-primary badge-pill bg-success">1d</span>
             </li>
-          </ul>
+          </ul></a>
+        </div>
+        <div class="lanzamientos m-5">
+          <h2 class="text-primary">Próximos lanzamientos🔥</h1>
+            <ul class="list-group col-12 border border-info">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Biomutant
+                <span class="badge badge-primary badge-pill bg-success">14/02/2024</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Lords of Exile
+                <span class="badge badge-primary badge-pill bg-success">14/02/2024</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Tomb Raider 1-3 Remastered
+                <span class="badge badge-primary badge-pill bg-success">14/02/2024</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Mario vs. Donkey Kong
+                <span class="badge badge-primary badge-pill bg-success">16/02/2024</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Skull and Bones
+                <span class="badge badge-primary badge-pill bg-success">16/02/2024</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Pacific Drive
+                <span class="badge badge-primary badge-pill bg-success">22/02/2024</span>
+              </li>
+            </ul>
+        </div>
       </div>
     </main>
-    <footer class="fixed-bottom col-12">
+    <footer class="fixed-bottom col-12 border-top border-dark">
       <div class="text-center p-3 text-white" style="background-color:rgb(26, 17, 63)">
         © 2024 Copyright: GameHub
         <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2x m-2" style="color: #ffffff;"></i></a>

@@ -12,10 +12,19 @@ export class ListaProductosComponent implements OnInit{
   productos: IProducto[] | undefined;
 
   constructor(private cargaProducto: CargaProductoService) {}
-
   ngOnInit() {
-      this.productos=this.cargaProducto.getProductos();
+    const opcionesSubscribe ={
+      next: (listaProductos: IProducto[]) => {
+        this.productos = listaProductos;
+      },
+      error: (err: Error) => console.log(err),
+      complete: () => console.log('Fin de observable'),
+    };
+  
+    this.cargaProducto.getProductos().subscribe(opcionesSubscribe);
   }
+
+  
 
   anchoImagenes=100;
   estilosPar={

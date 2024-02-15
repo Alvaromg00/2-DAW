@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ILuchador} from "../interfaces/iluchador";
 import { CargarLuchadoresService} from "../servicios/cargar-luchadores.service";
 
@@ -13,11 +13,18 @@ export class AreaSeleccionComponent implements OnInit{
   luchadorSeleccionado: any = null;
   indiceSeleccionado: number = -1;
 
-
   constructor(private cargaLuchador: CargarLuchadoresService){}
 
-  ngOnInit(){
-    this.luchadores=this.cargaLuchador.getLuchadores();
+  ngOnInit() {
+    const opcionesSubscribe ={
+      next: (listaLuchadores: ILuchador[]) => {
+        this.luchadores = listaLuchadores;
+      },
+      error: (err: Error) => console.log(err),
+      complete: () => console.log('Fin de observable'),
+    };
+  
+    this.cargaLuchador.getLuchadores().subscribe(opcionesSubscribe);
   }
 
   mostrarNombreLuchador(indice: number) {

@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(26, 17, 63);
+}
+
 .nombre{
     font-family: 'Honk', system-ui;
     font-size: 35px;
@@ -6,17 +10,41 @@
 
 h1{
     font-size: 50px;
-    margin-top: 85px;
 }
 
 main{
-    margin-top: 65px;
+    margin: 120px;
 }
 
 .carousel-item{
-    max-height: 1100px;
+    max-height: 600px;
+    max-width: 1000px;
 }
 
-.lanzamientos{
-    padding-bottom: 75px;
+a{
+    text-decoration: none;
+}
+
+.a:hover{
+    background-color: lightgray;
+}
+
+img.psplus{
+    width: 100%;
+    max-width: 800px;
+}
+
+.kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+
+@media screen and (min-width: 1000px) {
+    .datos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
