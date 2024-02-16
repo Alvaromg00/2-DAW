@@ -38,19 +38,29 @@ app.post(url, (req,res,next) => {
 });
 
 // Actualizamos un valor introduciendo su nombre por parámetros
-app.put(url+"/:name", (req,res,next) => {
-    // :name corresponde con req.params.name
-    let nameIndex = misDestinos.indexOf(req.params.name);
-    if(nameIndex>= 0 && req.body != null){
-        //El parametro a cambiar se introduce en el cuerpo de la petición
-        misDestinos[nameIndex] = req.body[0];
+// Actualizamos un producto por su ID
+app.put(url+"/:id", (req,res,next) => {
+    const idProducto = parseInt(req.params.id);
+    const nuevoProducto = req.body; // El nuevo producto viene en el cuerpo de la petición
+
+    // Buscar el índice del producto con el ID dado
+    const index = misDestinos.findIndex(producto => producto.id === idProducto);
+
+    // Si no se encuentra el producto, devolver un error
+    if (index === -1) {
+        return res.status(404).json({ error: 'Producto no encontrado' });
     }
-    else {
-        res.json(["Error"]);
-    }
-    fs.writeFileSync(destinosFichero,  JSON.stringify(misDestinos,null,2));
-    res.json(misDestinos[nameIndex]);
+
+    // Actualizar el producto en la lista de destinos
+    misDestinos[index] = nuevoProducto;
+
+    // Escribir los cambios de vuelta al archivo JSON
+    fs.writeFileSync(destinosFichero, JSON.stringify(misDestinos, null, 2));
+
+    // Devolver el producto actualizado
+    res.json(misDestinos[index]);
 });
+
 
 // Borramos un valor introduciendo su nombre por parámetros
 app.delete(url +"/:name", (req,res,next) => {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IProducto } from '../interfaces/i-producto';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, catchError, map, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,21 @@ export class CargaProductoService {
   constructor(private http: HttpClient) { }
 
   getProductos(): Observable<IProducto[]>{
-    return this.http.get<IProducto[]>(this.URLproductos);
+    return this.http.get<IProducto[]>(this.URLproductos).pipe(
+      catchError((resp: HttpErrorResponse) => of( [
+        {
+          'id': 4,
+          'descripcion': 'Producto-Prueba',
+          'disponibilidad': new Date('2000-01-01T00:00:00.000Z'),
+          'precio': 100,
+          'imagenUrl': 'assets/ps5.jpg',
+          'puntuacion': 2
+        }
+      ])
+    ),
+    tap(listaProductos => console.log(listaProductos)),
+    map(listaProductos => listaProductos.filter(p => p.puntuacion < 5))
+    );
   }
+
 }
