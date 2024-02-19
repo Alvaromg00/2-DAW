@@ -144,6 +144,11 @@ img.psplus{
     margin-bottom: 25px;
 }
 
+iframe{
+    width: 75%;
+    height: 400px;
+}
+
 @media (min-width: 1000px) {
 
     .flex-tabs #tab-uno-label {
