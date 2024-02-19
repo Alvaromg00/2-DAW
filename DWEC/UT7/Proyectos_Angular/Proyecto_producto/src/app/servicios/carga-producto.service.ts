@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IProducto } from '../interfaces/i-producto';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, catchError, map, of, tap } from 'rxjs';
+import { Observable, catchError, map, of, retry, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,7 @@ export class CargaProductoService {
 
   getProductos(): Observable<IProducto[]>{
     return this.http.get<IProducto[]>(this.URLproductos).pipe(
+      retry(3),
       catchError((resp: HttpErrorResponse) => of( [
         {
           'id': 4,
@@ -25,8 +26,12 @@ export class CargaProductoService {
       ])
     ),
     tap(listaProductos => console.log(listaProductos)),
-    map(listaProductos => listaProductos.filter(p => p.puntuacion < 5))
+    map(listaProductos => listaProductos.filter(p => p.puntuacion <= 5))
     );
+  }
+
+  guardarProducto(prod: IProducto): Observable<IProducto> {
+    return this.http.put<IProducto>(this.URLproductos + '/' + prod.id, prod);
   }
 
 }

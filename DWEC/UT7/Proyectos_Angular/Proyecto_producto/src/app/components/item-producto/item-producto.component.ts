@@ -1,5 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { IProducto } from '../../interfaces/i-producto';
+import { CargaProductoService } from '../../servicios/carga-producto.service';
 
 @Component({
   selector: 'item-producto, [item-producto]' ,
@@ -10,7 +11,7 @@ export class ItemProductoComponent implements OnInit{
   @Input() producto: IProducto | any;
   @Input() displayFotos:  | any;
 
-  constructor(){ }
+  constructor(private cargaProductos: CargaProductoService){ }
 
   mostrarPrecio(prod: IProducto){
     alert(prod.precio)
@@ -30,5 +31,13 @@ export class ItemProductoComponent implements OnInit{
 
     filtroBusqueda: string = '';
     anchoImagenes=100;
+
+    cambioEstrellas(nuevaPuntuacion: number) {
+      this.producto.puntuacion = nuevaPuntuacion;
+      this.cargaProductos.guardarProducto(this.producto).subscribe(
+        p => console.log('Actualizando el producto' + p),
+        error => console.log(error)
+      );
+    }
 
 }

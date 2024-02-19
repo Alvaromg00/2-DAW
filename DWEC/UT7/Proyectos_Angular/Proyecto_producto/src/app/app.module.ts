@@ -10,16 +10,28 @@ import { ItemProductoComponent } from './components/item-producto/item-producto.
 import { EstrellasRatingComponent } from './components/estrellas-rating/estrellas-rating.component';
 import { CargaProductoService } from './servicios/carga-producto.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ListaProductosComponent, ItemProductoComponent, EstrellasRatingComponent, FiltroProductosPipe],
+  declarations: [AppComponent, ListaProductosComponent, ItemProductoComponent, EstrellasRatingComponent, FiltroProductosPipe, BienvenidaComponent, DetallesProductoComponent],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(
+      [
+        {path: 'bienvenida', component: BienvenidaComponent},
+        {path: 'productos', component: ListaProductosComponent},
+        {path: 'productos/:id', component: DetallesProductoComponent},
+        {path: '', redirectTo: '/bienvenida', pathMatch: 'full'},
+        {path: '**', redirectTo: '/bienvenida', pathMatch: 'full'},
+      ]
+    )
   ],
   providers: [CargaProductoService],
   bootstrap: [
