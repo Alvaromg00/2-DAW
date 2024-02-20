@@ -17,6 +17,14 @@ main{
     margin: 120px;
 }
 
+.spinner-border {
+    display: none;
+  }
+  
+  #myButton:focus .spinner-border {
+    display: inline-block;
+  }
+
 .carousel-item{
     max-height: 600px;
     max-width: 1000px;

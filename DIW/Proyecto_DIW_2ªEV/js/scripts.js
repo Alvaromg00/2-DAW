@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
       // Opciones, si es necesario
       itemSelector: '.col-lg-3', // Selector de los elementos de la cuadrícula
       columnWidth: '.col-lg-3', // Selector del ancho de la columna
-      percentPosition: true // Usa porcentajes para las posiciones
+      percentPosition: true
     });
-  });
+});
   
-  // Script para abrir el modal con la imagen correspondiente
+// Script para abrir el modal con la imagen correspondiente
   function openModal(imageSrc) {
-    var modalImage = document.getElementById('modal-img');
-    modalImage.src = imageSrc;
-    var modal = new bootstrap.Modal(document.getElementById('imagenModal'));
-    modal.show();
-  }
+  var modalImage = document.getElementById('modal-img');
+  modalImage.src = imageSrc;
+  var modal = new bootstrap.Modal(document.getElementById('imagenModal'));
+  modal.show();
+}
   
