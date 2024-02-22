@@ -30,6 +30,18 @@ export class CargaProductoService {
     );
   }
 
+  getProducto(prodID: number): Observable<IProducto> {
+    const url = `${this.URLproductos}/${prodID}`; // Concatenar el ID al final de la URL
+    return this.http.get<IProducto>(url).pipe(
+      retry(3),
+      catchError(() => {
+        throw new Error(`No se encontró un producto con el ID ${prodID}`);
+      })
+    );
+  }
+  
+  
+
   guardarProducto(prod: IProducto): Observable<IProducto> {
     return this.http.put<IProducto>(this.URLproductos + '/' + prod.id, prod);
   }

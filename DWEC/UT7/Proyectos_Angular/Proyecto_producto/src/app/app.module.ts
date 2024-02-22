@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ListaProductosComponent } from './components/lista-productos/lista-productos.component';
@@ -11,12 +11,16 @@ import { EstrellasRatingComponent } from './components/estrellas-rating/estrella
 import { CargaProductoService } from './servicios/carga-producto.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { BienvenidaComponent } from './bienvenida/bienvenida.component';
-import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
+import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
+import { DetallesProductoComponent } from './components/detalles-producto/detalles-producto.component';
+import { DetallesProductoGuardaService } from './servicios/detalles-producto-guarda.service';
+import { DetallesProductoResolveService } from './servicios/detalles-producto-resolve.service';
+import { EditarDetallesProductoComponent } from './components/editar-detalles-producto/editar-detalles-producto.component';
+import { EdicionProductoService } from './servicios/editar-producto-resolve.service';
 
 
 @NgModule({
-  declarations: [AppComponent, ListaProductosComponent, ItemProductoComponent, EstrellasRatingComponent, FiltroProductosPipe, BienvenidaComponent, DetallesProductoComponent],
+  declarations: [AppComponent, ListaProductosComponent, ItemProductoComponent, EstrellasRatingComponent, FiltroProductosPipe, BienvenidaComponent, DetallesProductoComponent, EditarDetallesProductoComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -27,13 +31,22 @@ import { DetallesProductoComponent } from './detalles-producto/detalles-producto
       [
         {path: 'bienvenida', component: BienvenidaComponent},
         {path: 'productos', component: ListaProductosComponent},
-        {path: 'productos/:id', component: DetallesProductoComponent},
+        {path: 'productos/:id', component: DetallesProductoComponent, canActivate: [DetallesProductoGuardaService],
+        resolve:  {
+          producto: DetallesProductoResolveService
+        }},
+        {path: 'productos/editar/:id',
+        component: EditarDetallesProductoComponent,
+        canActivate: [DetallesProductoGuardaService],
+        resolve: {
+          producto: DetallesProductoResolveService
+        }},
         {path: '', redirectTo: '/bienvenida', pathMatch: 'full'},
         {path: '**', redirectTo: '/bienvenida', pathMatch: 'full'},
       ]
     )
   ],
-  providers: [CargaProductoService],
+  providers: [CargaProductoService, Title, DetallesProductoComponent, EdicionProductoService],
   bootstrap: [
     AppComponent
   ]

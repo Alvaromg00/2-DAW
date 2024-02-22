@@ -23,9 +23,27 @@ var misDestinos = JSON.parse(fs.readFileSync(destinosFichero));
 
 // Devolvemos una respuesta sobre una petición GET dinámica
 // Parámetros req = request, res = response, next
-app.get(url, (req,res,next) => {
-    res.json(misDestinos);
+app.get('/productos/:id?', (req, res) => {
+    let productId = req.params.id;
+
+    if (productId) {
+        // Si se proporciona un ID, buscar y devolver el producto específico
+        let producto = misDestinos.find(producto => producto.id === parseInt(productId));
+
+        if (producto) {
+            // Si se encuentra el producto, devolverlo como respuesta en formato JSON
+            res.json(producto);
+        } else {
+            // Si no se encuentra el producto, devolver un mensaje de error
+            res.status(404).json({ error: 'Producto no encontrado' });
+        }
+    } else {
+        // Si no se proporciona un ID, devolver todos los productos
+        res.json(misDestinos);
+    }
 });
+
+
 
 // Almacenamos un valor de una petición POST
 app.post(url, (req,res,next) => {
@@ -39,27 +57,28 @@ app.post(url, (req,res,next) => {
 
 // Actualizamos un valor introduciendo su nombre por parámetros
 // Actualizamos un producto por su ID
-app.put(url+"/:id", (req,res,next) => {
-    const idProducto = parseInt(req.params.id);
-    const nuevoProducto = req.body; // El nuevo producto viene en el cuerpo de la petición
+app.put("/productos/editar/:id", (req, res, next) => {
+    const productId = req.params.id;
+    const updatedProductData = req.body;
 
-    // Buscar el índice del producto con el ID dado
-    const index = misDestinos.findIndex(producto => producto.id === idProducto);
+    // Buscar el producto por su ID en el array de destinos
+    const index = misDestinos.findIndex(producto => producto.id === parseInt(productId));
 
-    // Si no se encuentra el producto, devolver un error
-    if (index === -1) {
-        return res.status(404).json({ error: 'Producto no encontrado' });
+    if (index !== -1) {
+        // Si se encuentra el producto, actualizar sus datos
+        misDestinos[index] = { ...misDestinos[index], ...updatedProductData };
+
+        // Guardar los cambios en el archivo JSON
+        fs.writeFileSync(destinosFichero, JSON.stringify(misDestinos, null, 4));
+
+        // Devolver el producto actualizado como respuesta
+        res.json(misDestinos[index]);
+    } else {
+        // Si no se encuentra el producto, devolver un mensaje de error
+        res.status(404).json({ error: 'Producto no encontrado' });
     }
-
-    // Actualizar el producto en la lista de destinos
-    misDestinos[index] = nuevoProducto;
-
-    // Escribir los cambios de vuelta al archivo JSON
-    fs.writeFileSync(destinosFichero, JSON.stringify(misDestinos, null, 2));
-
-    // Devolver el producto actualizado
-    res.json(misDestinos[index]);
 });
+
 
 
 // Borramos un valor introduciendo su nombre por parámetros

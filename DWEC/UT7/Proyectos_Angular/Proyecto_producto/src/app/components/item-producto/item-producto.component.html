@@ -1,14 +1,14 @@
 <td>{{producto.id}} </td>
-    <td><img 
-        [src]="producto.imagenUrl" 
-        [width]="anchoImagenes" 
-        [ngStyle]="{'display' : displayFotos}"></td>                   
-    <td>
-    {{producto.descripcion}}</td>
-    <td (click)="mostrarPrecio(producto)">{{producto.precio | currency:'EUR'}}</td>
-    <td>{{producto.disponibilidad | date:'dd/MM/yyyy'}}</td>
-    <td [title]="producto.puntuacion">
-        <estrellas-rating [numEstrellas]="producto.puntuacion"
-        (numEstrellascambiadas)="cambioEstrellas($event)">
-        </estrellas-rating>
-    </td>
+<td><img 
+    [src]="producto.imagenUrl" 
+    [width]="anchoImagenes" 
+    [ngStyle]="{'display' : displayFotos}">
+</td>                   
+<td [routerLink]="['/productos/', producto.id]">{{producto.descripcion}}</td>
+<td (click)="mostrarPrecio(producto)">{{producto.precio | currency:'EUR'}}</td>
+<td>{{producto.disponibilidad | date:'dd/MM/yyyy'}}</td>
+<td [title]="producto.puntuacion">
+    <estrellas-rating [numEstrellas]="producto.puntuacion"
+    (numEstrellascambiadas)="cambioEstrellas($event)">
+    </estrellas-rating>
+</td>

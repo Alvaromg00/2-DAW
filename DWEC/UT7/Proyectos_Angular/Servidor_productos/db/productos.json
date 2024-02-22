@@ -1,26 +1,26 @@
 [
-  {
-    "id": 1,
-    "descripcion": "Portatil Lenovo",
-    "disponibilidad": "2023-10-09T00:00:00.000Z",
-    "precio": 450,
-    "imagenUrl": "assets/lenovo.jpg",
-    "puntuacion": 5
-  },
-  {
-    "id": 2,
-    "descripcion": "Playstation 5",
-    "disponibilidad": "2023-10-09T00:00:00.000Z",
-    "precio": 499,
-    "imagenUrl": "assets/ps5.jpg",
-    "puntuacion": 4
-  },
-  {
-    "id": 3,
-    "descripcion": "Xiaomi Redmi Note 13",
-    "disponibilidad": "2021-02-09T00:00:00.000Z",
-    "precio": 280,
-    "imagenUrl": "assets/xiaomi.jpg",
-    "puntuacion": 4
-  }
+    {
+        "id": 1,
+        "descripcion": "Portatil Lenovo",
+        "disponibilidad": "2023-10-08T22:00:00.000Z",
+        "precio": 450,
+        "imagenUrl": "assets/lenovo.jpg",
+        "puntuacion": 3
+    },
+    {
+        "id": 2,
+        "descripcion": "Playstation 5",
+        "disponibilidad": "2023-09-09T22:00:00.000Z",
+        "precio": 510,
+        "imagenUrl": "assets/ps5.jpg",
+        "puntuacion": 5
+    },
+    {
+        "id": 3,
+        "descripcion": "Xiaomi Redmi Note 13",
+        "disponibilidad": "2021-09-01T22:00:00.000Z",
+        "precio": 280,
+        "imagenUrl": "assets/xiaomi.jpg",
+        "puntuacion": 1
+    }
 ]

@@ -1,0 +1,15 @@
+<h1>Detalles del producto {{ idProducto }}</h1>
+<br>
+<main class="d-flex justify-content-center m-3">
+  <div class="card" style="width: 35rem;">
+    <div class="card-header">DESCRIPCIÓN DEL PRODUCTO</div>
+    <div class="card-body">
+      <img [src]="producto?.imagenUrl" class="card-img-top" alt="{{producto.descripcion}}" style="width: fit-content;">
+      <h5 class="card-title">{{ producto?.descripcion }}</h5>
+      <p class="card-text">{{ producto?.precio | currency: 'EUR'}}</p>
+      <button class="btn btn-warning m-2" [routerLink]="['/productos/editar', idProducto]">Editar</button>
+      <button class="btn btn-primary" [routerLink]="['/productos']">Volver</button>
+    </div>
+    <div class="card-footer">{{producto.disponibilidad | date:'dd/MM/yyyy'}}</div>
+  </div>
+</main>

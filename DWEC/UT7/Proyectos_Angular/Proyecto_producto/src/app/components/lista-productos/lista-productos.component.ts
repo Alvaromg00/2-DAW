@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProducto } from '../../interfaces/i-producto';
 import { CargaProductoService } from '../../servicios/carga-producto.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-lista-productos',
@@ -11,8 +12,10 @@ export class ListaProductosComponent implements OnInit{
 
   productos: IProducto[] | undefined;
 
-  constructor(private cargaProducto: CargaProductoService) {}
+  constructor(private cargaProducto: CargaProductoService, private titleService: Title) {}
   ngOnInit() {
+    //Establecde el titulo
+    this.titleService.setTitle("Listado de productos")
     const opcionesSubscribe ={
       next: (listaProductos: IProducto[]) => {
         this.productos = listaProductos;
