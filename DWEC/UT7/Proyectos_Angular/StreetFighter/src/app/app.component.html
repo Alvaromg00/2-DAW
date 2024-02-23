@@ -1,4 +1,12 @@
+<div>
+    <nav style="background-color: #e3f2fd; height: 60px; display: flex; align-items: center;">
+        <a class="nav-link" [routerLink]="['/bienvenida']" [routerLinkActive]="['active']" style="text-decoration: none; margin: 15px; font-size: large; color: black;">Bienvenida</a>
+        <a class="nav-link" [routerLink]="['/seleccion']" [routerLinkActive]="['active']"  style="text-decoration: none; margin: 15px; font-size: large; color: black;">Selección</a>
+    </nav>
+     <router-outlet></router-outlet>
+  </div>
+  
 <div class="container">
-    <h1 class="titulo">{{title}}</h1>
-    <div class="areaSeleccion"><app-area-seleccion></app-area-seleccion></div>
+    <img src="../assets/Street_Fighter_old_logo.png" alt="" style="max-height: 250px;">
+    <div class="areaSeleccion"><router-outlet></router-outlet></div>
 </div>

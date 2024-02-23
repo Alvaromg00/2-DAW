@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 luchador" *ngFor="let luchador of luchadores; let i = index">
-      <app-retrato-luchador [luchador]="luchador" [indiceSeleccionado]="indiceSeleccionado" [indiceLuchador]="i" (luchadorSeleccionado)="mostrarNombreLuchador($event)"></app-retrato-luchador>
+      <app-retrato-luchador [luchador]="luchador" [indiceSeleccionado]="indiceSeleccionado" [indiceLuchador]="i" (luchadorSeleccionado)="estaSelect($event)"></app-retrato-luchador>
     </div>
   </div>
   <div class="personaje" *ngIf="luchadorSeleccionado">
@@ -12,6 +12,7 @@
         <app-atributos-luchador nombreAtributo="FUERZA" [valorAtributo]="luchadorSeleccionado?.fuerza"></app-atributos-luchador>
         <app-atributos-luchador nombreAtributo="DESTREZA" [valorAtributo]="luchadorSeleccionado?.destreza"></app-atributos-luchador>
         <app-atributos-luchador nombreAtributo="VIDA" [valorAtributo]="luchadorSeleccionado?.vida"></app-atributos-luchador>
+        <div class="btn-seleccionar" style="border: 2px solid white; width: 220px; text-align: center; color: white; font-family: cursive; font-size: 20px; background-color: rgb(255, 255, 255, 0.2); margin-top: 20px;" [routerLink]="['/antes-luchar/'+luchadores?.indexOf(luchadorSeleccionado)]">SELECCIONAR</div>
       </div>
     </div>
   </div>

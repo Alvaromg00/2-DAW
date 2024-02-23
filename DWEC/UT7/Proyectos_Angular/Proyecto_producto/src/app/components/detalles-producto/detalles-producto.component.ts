@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProducto } from '../../interfaces/i-producto';
-import { CargaProductoService } from '../../servicios/carga-producto.service';
 
 @Component({
   selector: 'app-detalles-producto',

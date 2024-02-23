@@ -1,0 +1,30 @@
+Lista de componentes de Bootstrap:
+
+	home.html:
+		1.Navbar
+		2.DropDown
+		3.Carrousel
+		4.Listas
+
+	noticias.html:
+		5.BreadCrumb
+		6.Cards
+		7.Paginación
+
+	acceder.html:
+		8.Botones
+		9.Tabs
+		10.Formularios
+		11.Alert
+
+	galeria.html:
+		12.Modal
+		13.Botón de cierre
+		14.ToolTip
+
+	TopsJuegos.html:
+		15.Acordeón
+		16.Badge
+
+	Curiosidades.html:
+		

@@ -27,7 +27,7 @@ export class AreaSeleccionComponent implements OnInit{
     this.cargaLuchador.getLuchadores().subscribe(opcionesSubscribe);
   }
 
-  mostrarNombreLuchador(indice: number) {
+  estaSelect(indice: number) {
     if (this.indiceSeleccionado === indice) {
       this.indiceSeleccionado = -1; // Deseleccionar si ya estaba seleccionado
     } else {
