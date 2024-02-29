@@ -13,7 +13,7 @@ export class DetallesProductoResolveService implements Resolve<IProducto> {
   constructor(private cargaProducto: CargaProductoService,
     private router: Router){}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IProducto> {
+  resolve(route: ActivatedRouteSnapshot): Observable<IProducto> {
       return this.cargaProducto.getProducto(route.params['id']).pipe(
         catchError(error => {
           this.router.navigate(['/bienvenida']);

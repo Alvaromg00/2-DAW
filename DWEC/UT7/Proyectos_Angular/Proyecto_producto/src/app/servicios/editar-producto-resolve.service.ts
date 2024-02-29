@@ -8,7 +8,7 @@ import { IProducto } from '../interfaces/i-producto';
 })
 export class EdicionProductoService {
 
-  private Url = 'http://localhost:3000/productos/editar'; // URL de la API para editar productos
+  private Url = 'http://localhost:3000/productos/editar'; 
 
   constructor(private http: HttpClient) { }
 
