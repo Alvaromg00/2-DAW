@@ -46,6 +46,7 @@ func main() {
 	}
 
 	// Run Resource Hacker command to modify the icon
+	// Alternative: Resource Cracker https://www.pelock.com/products/resource-cracker
 	cmd := exec.Command("../ResourceHacker.exe", "-open", exePath, "-save", exePath, "-action", "modify", "-resource", iconPath, "-mask", "ICONGROUP,MAINICON,", "-log", "NUL")
 	err := cmd.Run()
 	if err != nil {
